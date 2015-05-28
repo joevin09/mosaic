@@ -1,0 +1,131 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-avr.-2015, 16:25:06
+    Author     : Joevin
+*/
+
+.last_register_home.all-members{
+    position: relative;
+    left:201px;
+    display: inline;
+    display: inline-block;
+    margin-top: -297px;
+    overflow: hidden;
+    padding-bottom: 136px;
+
+    ul{
+        overflow: hidden;
+        padding-left:0;
+        li{
+            margin-top: 12px;
+
+            &:nth-child(4n+5){
+                clear: both;
+            }
+
+            .loop(25);
+        }
+    }
+}
+
+a.back, div.back{
+    position: relative;
+    border: none;
+    background: none;
+    color: @my_black;
+    text-transform: none;
+    top:10px;
+    font-size:12px;
+    cursor: pointer;
+    /*    font-family: @font-family-serif;*/
+    &:hover{
+        color: @my_brun;
+    }
+}
+
+.my_h4.move_h{
+    left: 68px;
+    bottom: 300px;
+}
+
+.my_h4.move_h.for-all{
+    left: 134px;
+}
+
+.img_postclass{
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-left: 0px!important;
+    opacity: 1;
+}
+
+.img_post.membres-img{
+    margin-left: 30px;
+    margin-top: -45px;
+    padding-bottom: 61px;
+}
+
+.membres option{
+    text-transform: uppercase;
+}
+
+.membres select {
+    background: url("http://joevinlicot.be/select-members.png") no-repeat 95% 16px @my_brun;
+    background-size: 6%;
+    border: none;
+    width: 206px;
+    color: @my_white;
+    text-align: center;
+    border: 2px solid #9f8e70;
+    font-size: 12px;
+    height: 41px;
+    padding-left: 15px;
+    margin-right: 10px;
+    -webkit-appearance: none;
+    border-radius: 0px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    &:focus {
+        border-color: @my_brun;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(189, 204, 212, 0.6); 
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(189, 204, 212, 0.6); 
+    }
+
+}
+
+.breadcrumb{
+    background: none;
+    border: none;
+    border-radius: 0;
+    font-size: 12px;
+    position: relative;
+    margin-top: -53px;
+    left: 71px;
+    top: 20px;
+    li a{
+        color: @my_black;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+.breadcrumb li a.active {
+    color: @my_brun;
+}
+
+.breadcrumb > li + li:before {
+    color: @my_brun;
+}
+
+

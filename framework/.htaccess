@@ -1,0 +1,6 @@
+RewriteEngine On
+# RewriteBase /framework/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ([^\/]+)/?([^\/]*)/?([^\/]*)/?([^\/]*)/?([^\/]*)/? /framework/index.php?router_class=$1&router_method=$2&var1=$3&var2=$4&var3=$5 [L]

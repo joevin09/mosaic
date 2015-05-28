@@ -1,0 +1,541 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-avr.-2015, 16:44:31
+    Author     : Joevin
+*/
+
+.profil-poeple{
+    h2{
+        font-size: 20px!important;
+        text-transform: none;
+        color: @my_black;
+        &:after{
+            display: none!important;
+        }
+    }
+    button{
+        margin-bottom:10px;
+    }
+    p{
+        padding:10px 0!important;
+        margin: 0!important;
+    }
+    img{  
+        width: 150px!important;
+        height: 150px;
+        position: relative;
+        top: -15px;
+        left: -20px;
+        margin-top: -15px;
+        margin-left: -10px;
+        float: left;
+    }
+    .fonction{
+        font-weight: 700;
+    }
+    .city{
+        color: @my_brun;
+        padding: 2px 0!important;
+    }
+    .website{
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 10px;
+        color: @my_brun;
+        font-family: @font-family-sans-serif;
+        font-size: 12px;
+        clear: both;
+    }
+}
+
+.return{
+    position: absolute!important;
+    bottom: 30px;
+    left: 30px;
+}
+
+.no-lien{
+    background: none!important;
+    border: none!important;
+    color:@my_brun!important;
+    padding: 0!important;
+    &:before{
+        display: none!important;
+    }
+    &:hover{
+        text-decoration: underline!important;
+    }
+}
+
+.motif.motif-profil{
+    left: 415px;
+    top: 50px;
+}
+
+.profil-poeple .about{
+    padding-top: 0!important;
+}
+
+.capacite{
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: -264px; 
+    left: 100px;
+    z-index:200;
+    h4{
+        color:@my_black;
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 20px;
+        font-family: @font-family-serif;
+        &:before{
+            content:"";
+            display: block;
+            width: 15px;
+            height: 2px;
+            background: @my_black;
+            float: left;
+            margin: 8px 8px 5px 0;
+        }
+    }
+    .last-li{
+        margin-right: 0;
+        cursor: pointer;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        background: @my_white;
+        &:hover{
+            .fa-plus{
+                color: @my_white;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -ms-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+            background: @my_brun;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+    }
+    ul{
+        padding: 0;
+        li{ 
+            overflow: hidden;
+            word-wrap: break-word;
+            margin-bottom: 20px;
+            width: 100px;
+            height: 100px;
+            list-style: none;
+            background: @my_brun;
+            float: left;
+            margin-right: 30px;
+            &:nth-child(6n+7){
+                clear: both;
+            }
+            p{
+                font-size: 12px;
+                color: @my_white;
+                text-align: center;
+                top: 65px;
+                position: relative;
+                padding:5px;
+                font-family: @font-family-sans-serif;
+            }
+        }
+    }
+}
+
+.my_offre{
+    margin-top: -200px; 
+}
+
+.motif.motif-capacite{
+    left: 415px;
+    top: -90px;
+    z-index: 10;
+}
+
+.contact-me{
+    font-size: 18px;
+    cursor:pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.infos{
+    z-index: 100;
+    position: relative;
+    margin-bottom: 30px;
+    height: 453px;
+    width: 453px;
+    display: inline;
+    display: inline-block;
+    background: @my_black;
+    color: @my_white;
+    padding:30px;
+    h2{
+        &:after{
+            content:"";
+            width: 40px; 
+            height: 2px;
+            display: block;
+            margin: 15px 0 30px 0;
+            position: relative;
+            background: @my_white;
+        }
+    }
+}
+
+.offre{
+    margin:0 60px 90px 170px;
+    background: @my_white;
+    color: @my_black;
+    width: 400px;
+    height: auto;
+    top:10px;
+    z-index: 5;
+    min-height: 400px;
+    h2{
+        font-size:20px!important;
+        &:after{
+            background: @my_black;
+        }
+    }
+}
+
+.formation{
+    h2{
+        font-size: 20px!important;
+    }
+    position: relative;
+    top: -45px;
+    height: auto;
+    min-height:453px;
+    left: 27px;
+    padding-bottom: 170px;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 453px;
+    }
+    .formation-text{
+        z-index: 500;
+        position: relative;
+    }
+}
+
+.fa-plus{
+    font-size: 18px!important;
+    color:@my_black;
+    padding: 10px;
+    margin: 32px 33px;
+}
+
+
+.formation, .my_offre{
+    p{
+        font-family: @font-family-sans-serif;
+        font-size: 16px;
+    }
+    span{
+        font-family: @font-family-serif;
+        color:@my_brun;
+        &:after{
+            content: "";
+            width: 40px;
+            height: 2px;
+            display: block;
+            margin: 15px 0 15px 0;
+            position: relative;
+            background: @my_white;
+        }
+        &:last-child{
+            &:after{
+                display: none;
+            }
+        }
+    }
+}
+
+.my_offre{
+    float:left;
+    span{
+        &:after{
+            background: @my_black;
+        }
+    }
+}
+
+.clear{
+    clear: both;
+}
+
+.link-modif-profil{
+    position: relative;
+    display: inline;
+    display: inline-block;
+    .fa-pencil{
+        position: absolute;
+        top: 35px;
+        left: 55px;
+        z-index: 1000;
+        font-size: 22px;
+        color: @my_white;
+        pointer-events: none;
+    }
+    &:hover{
+        .fa-pencil{
+            color: @my_brun;
+        }
+    }
+    a, button{
+        border: 2px solid @my_brun;
+        cursor: pointer;
+        width: 130px!important;
+        height: 130px;
+        padding:0;
+        display: block;
+        text-align:center;
+        background: @my_white;
+        z-index: 100;
+        color: @my_white;
+        font-size: 11px;
+        padding-top: 65px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        &:before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: @my_brun;
+            -webkit-transform: scaleY(1);
+            -moz-transform: scaleY(1);
+            -o-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 50% 0;
+            -moz-transform-origin: 50% 0;
+            -o-transform-origin: 50% 0;
+            -ms-transform-origin: 50% 0;
+            transform-origin: 50% 0; 
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        &:hover{
+            text-decoration: none!important;
+            color:@my_brun!important;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            &:before{
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -ms-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+                -webkit-transform: scaleY(0);
+                -moz-transform: scaleY(0);
+                -o-transform: scaleY(0);
+                -ms-transform: scaleY(0);
+                transform: scaleY(0);
+            }
+        }
+    }
+}
+
+.btn-choose.link-modif-profil {
+    position: relative;
+    left: 236px;
+    top: 80px;
+}
+
+
+/*-------------*/
+
+.poeple-modif{
+    padding-bottom:20px;
+    .avatar-modif{
+        padding:10px 0;
+    }
+    .first-input label{
+        clear: both;
+        display: none;
+    }
+    input{
+        border-radius: 0;
+        box-shadow: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+    .form-control:focus {
+        border-color: transparent; 
+        outline: none;
+        border-bottom: 1px solid @my_black!important;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+}
+
+.my_label{
+    color: @my_white!important;
+}
+
+.fuctions-list{
+    display: inline-block;
+    padding: 85px 30px 50px 30px;
+    background: @my_black;
+    position: relative;
+    top:-45px;
+    z-index: 1000;
+    label{
+        color: @my_black;
+    }
+    select{
+        color: @my_black!important;
+        width: auto;
+        padding-right: 50px;
+    }
+}
+.motif.motif-capacite.modif-modif{
+    top: 0;
+    margin-top: -100px;
+}
+.cityexperience{
+    top: 0;
+    margin-top: -100px;
+    select{ 
+        width: auto;
+        padding-right: 50px;
+        background-color: @my_gray;
+    }
+}
+
+.btn-choose.link-modif-profil.modif-your-profil{
+    top: 0;
+    left: 0;
+    margin-bottom: 80px;
+    .fa-pencil{
+        top:41px;
+    }
+    button{
+      padding-top: 28px!important;  
+    }
+    a,button{ 
+        border: 2px solid @my_brun;
+        background: @my_white;
+        padding-top: 70px;
+        margin-right: 30px;
+        border-radius: 0;
+        &:nth-child(2){
+            margin-right: 0;
+        }
+        &:hover{
+            border: 2px solid @my_brun;
+        }
+    }
+}
+
+.poeple-modif .change-profil input{
+    border-bottom: 1px solid @my_black !important;
+}
+
+
+/*RADIO*/
+/*
+input[type=radio] {
+	visibility: hidden;
+}
+
+.squaredThree {
+	width: 20px;	
+	margin: 20px auto;
+	position: relative;
+}
+
+.squaredThree label {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	border-radius: 4px;
+
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+
+	background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -o-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
+	background: linear-gradient(top, #222 0%, #45484d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+}
+
+.squaredThree label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 4px;
+	left: 4px;
+	border: 3px solid #fcfff4;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.squaredThree label:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+}
+
+.squaredThree input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}*/
+
+
+

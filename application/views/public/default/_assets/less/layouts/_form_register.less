@@ -1,0 +1,386 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-avr.-2015, 13:37:32
+    Author     : Joevin
+*/
+
+.no-js{
+    #form_agency{
+        display: inline-block;
+        margin-top: 0;
+    }
+    .pres .btn-choose div {
+        display: none;
+    }
+}
+
+.pres.pres-register{ 
+    float: left;
+    h2{
+        &:after{
+            content:"";
+            width: 40px; 
+            height: 2px;
+            display: block;
+            margin: 15px 0 25px 0;
+            position: relative;
+            background: @my_brun;
+        }
+    }
+}
+.pres .btn-choose{
+    position: absolute;
+    float: left;
+    a{  
+        border: 2px solid @my_brun;
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+        margin-right: 30px;
+        line-height: 125px;
+        padding:0;
+        top: 10px;
+        left: 20px;
+        text-align:center;
+        background: @my_white;
+        z-index: 100;
+        color: @my_white;
+        font-size: 11px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        &:before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: @my_brun;
+            -webkit-transform: scaleY(1);
+            -moz-transform: scaleY(1);
+            -o-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 50% 0;
+            -moz-transform-origin: 50% 0;
+            -o-transform-origin: 50% 0;
+            -ms-transform-origin: 50% 0;
+            transform-origin: 50% 0; 
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover, &.active{
+            text-decoration: none;
+            color:@my_brun;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            &:before{
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -ms-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+                -webkit-transform: scaleY(0);
+                -moz-transform: scaleY(0);
+                -o-transform: scaleY(0);
+                -ms-transform: scaleY(0);
+                transform: scaleY(0);
+            }
+            .fa-user, .fa-users{
+                color: @my_brun;
+            }
+        }
+        .fa-user, .fa-users{
+            color: @my_white;
+            position: absolute;
+            top: 25px;
+        }
+        .fa-user{
+            left: 39px;
+        }
+        .fa-users{
+            left: 36px;
+        }
+    }
+}
+
+.motif.motif-register{
+    left: 415px;
+    top: 50px;
+}
+
+.change_form_other #form_postulant{
+    display:inline-block;
+}
+
+.change_form_other .btn-choose .btn-postulant:before{
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    text-decoration: none;
+    color: #9f8e70;  
+}
+
+.change_form_other .pres .btn-choose .btn-postulant {
+    text-decoration: none;
+    color: #9f8e70;
+}
+
+.change_form_other .pres .btn-choose .btn-postulant .fa-user, .change_form_other .pres .btn-choose .btn-postulant .fa-users {
+    color: #9f8e70;
+}
+
+.change_form .pres .btn-choose .btn-agency:before {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    text-decoration: none;
+    color: #9f8e70;
+}
+
+.change_form .pres .btn-choose .btn-agency {
+    text-decoration: none;
+    color: #9f8e70;
+}
+
+.change_form .pres .btn-choose .btn-agency .fa-user, .change_form .pres .btn-choose .btn-agency .fa-users {
+    color: #9f8e70;
+}
+
+.form-register.form-register{
+    display: none;
+    &.active{
+        display: inline-block;
+        .animation(showDown 0.5s both linear);
+    }
+}
+
+#form_agency{
+    position: relative;
+    float: right;
+    left: -54px;
+    margin-bottom: 95px;
+    padding-bottom: 40px;
+    margin-top: -60px;
+    form select{
+        text-transform: none;
+    }
+}
+
+#form_postulant{
+    position: relative;
+    right: 28px;
+    top: -45px;
+    form select{
+        text-transform: none;
+    }
+}
+
+.form{
+    position: relative;
+    margin-bottom: 30px;
+    left: 27px;
+    z-index: 10;
+    top: 15px;
+    height: auto;
+    width: 453px;
+    display: inline;
+    display: inline-block;
+    background: @my_black;
+    padding:40px 15px 40px 15px;
+    .register-connect{
+        color:@my_white;
+        margin-top: 20px;
+        a{
+            color: @my_brun;
+            font-family: @font-family-sans-serif;
+        }
+    }
+    h4{
+        color:@my_black;
+        font-weight: 700;
+        font-size: 16px;
+        position: absolute;
+        left: 190px;
+        top: -45px;
+        margin-bottom: 20px;
+        font-family: @font-family-serif;
+        &:before{
+            content:"";
+            display: block;
+            width: 15px;
+            height: 2px;
+            background: @my_black;
+            float: left;
+            margin: 8px 8px 5px 0;
+        }
+    }
+    input, textarea{
+        background: @my_white;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        float: left;
+        padding: 6px 10px;
+        margin-bottom: 5px;
+    }
+    button[type=submit]{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 0;
+        border: 2px solid @my_brun;
+        padding: 10px 60px;
+        z-index: 100;
+        margin-bottom: 0;
+        color: @my_white;
+        font-size: 12px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        &:before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: @my_brun;
+            -webkit-transform: scaleY(1);
+            -moz-transform: scaleY(1);
+            -o-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 50% 0;
+            -moz-transform-origin: 50% 0;
+            -o-transform-origin: 50% 0;
+            -ms-transform-origin: 50% 0;
+            transform-origin: 50% 0; 
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        &:hover{
+            text-decoration: none;
+            color:@my_white;
+            background: @my_black;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            &:before{
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -ms-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+                -webkit-transform: scaleY(0);
+                -moz-transform: scaleY(0);
+                -o-transform: scaleY(0);
+                -ms-transform: scaleY(0);
+                transform: scaleY(0);
+            }
+        }
+    }
+    label{
+        font-size: 14px;
+        font-weight: 400;
+        padding: 5px 0;
+        color: @my_white; 
+        text-transform: uppercase;
+    }
+}
+.form-control:focus {
+    border-color: transparent!important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(189, 204, 212, 0.6); 
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(189, 204, 212, 0.6); 
+}
+
+
+select {
+    background: url("http://joevinlicot.be/arrow-select.png") no-repeat 90% 14px @my_white;
+    background-size: 12%;
+    border: none;
+    width: 100px;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 29px;
+    padding-left: 15px;
+    height: 34px;
+    margin-right: 10px;
+    -webkit-appearance: none;
+    border-radius: 0px;
+    &:focus {
+        border-color: transparent!important;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(189, 204, 212, 0.6); 
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(189, 204, 212, 0.6); 
+    }
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.alert{
+    color: #d44343;
+    padding: 10px 15px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 0px;
+    font-family: @font-family-serif;
+    &:before{
+        content: "";
+        display: block;
+        width: 2px;
+        margin-right: 5px;
+        height: 20px;
+        position: relative;
+        float: left;
+        background: #d44343;
+
+    }
+}
+
+.alert-success{
+    background: none;
+    color: @my_brun!important;
+    &:before{
+        background: @my_brun!important;
+    }
+}

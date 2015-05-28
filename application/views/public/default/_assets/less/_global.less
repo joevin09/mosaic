@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15-janv.-2015, 9:34:22
+    Author     : Joévin
+*/
+
+body{
+    text-rendering: optimizeLegibility;
+    overflow-y: scroll;
+}
+
+textarea { resize:vertical; }
+
+*:focus {
+    outline: none!important;
+    outline-offset: 0px!important; 
+}
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label{
+    color: #d44343!important;
+}
+
+p{
+    font-family: @font-family-serif;
+}
+
+#wrapper{
+    background: @my_gray;
+    background-size: auto 100%;
+    padding: 174px 30px 0px 30px; 
+    overflow: hidden;
+}
+
+.page-header {
+    display: none;
+}
+
+@media (min-height: 601px)
+{
+    .scroll-y{
+        overflow-y: hidden;
+    }
+}
+
+h2{
+    margin-top: 0!important;
+}
+
+a:visited, a:focus{
+    text-decoration: none;
+    background: transparent;
+}
+
+select{
+    cursor: pointer;
+    &.custom_select{
+        display: none;
+    }
+}
+
+.no-js .custom_select{
+    display: block;
+}
+
+
+@media (max-width: 1020px)
+{
+    .custom_select{
+        display: block!important;
+    }
+}

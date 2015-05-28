@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-avr.-2015, 10:34:49
+    Author     : Joevin
+*/
+
+.motif.motif-mosaic{
+    left: 430px;
+    top: 50px;
+}
+
+.fonction.fonction-mosaic{
+    clear: both;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding-top: 0!important;
+    font-family: @font-family-sans-serif;
+}
+
+.img-profil{
+    color:@my_brun!important;
+    padding: 0!important;
+    border: none!important;
+    background: none;
+    float: left;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    top: -15px;
+    left: -20px;
+    margin-top: -15px;
+    margin-left: -10px;
+    img{
+       -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s; 
+    }
+    &:before{
+        display: none;
+    }
+    &:hover{
+        img{ 
+            opacity: 0.2;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        .fa-pencil{
+            opacity: 1;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+    }
+    .fa-pencil{
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        opacity: 0;
+        position: absolute;
+        left:0;
+        font-size: 24px;
+        padding: 63px 65px;
+    }
+    img{
+        top: 0px!important;
+        left: 0px!important;
+        margin-top: 0px!important;
+        margin-left: 0px!important; 
+    }
+}

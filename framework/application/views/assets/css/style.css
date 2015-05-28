@@ -1,0 +1,117 @@
+/* CSS */
+
+html, body {
+    height: 100%; min-height: 100%;
+}
+
+footer{
+    opacity: 0;
+}
+
+/* BODY */
+
+body{
+    font: 16px "", arial, helvetica, "sans-serif";
+    font-weight: 300;
+    color: #b7b7b7;
+    background: #fff;
+    line-height: 1.5;
+    position: relative!important;
+}
+
+.body-loading * {
+    transition : none!important;
+}
+
+/* A */
+
+a{
+    color:red;
+}
+
+a:hover{
+    color:red;
+    text-decoration: none;
+}
+
+a:active, a:focus{
+    color: red;
+    outline: none!important;
+    text-decoration: none;
+    background-color: none;
+}
+
+/* HEADER */
+
+header{
+
+}
+
+/* NAV */
+
+.navbar{
+    margin-bottom: 0;
+}
+
+/* LOGO */
+
+
+/* MAIN */
+
+main{
+    display: block;
+    position: relative;
+}
+
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    background: url(../img/bg-header.png) repeat, #222222;
+    position: relative;
+    bottom: 0;
+}
+
+footer p{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding-bottom: 25px;
+    font-size: 10px;
+    clear: both;
+    color: #fff;
+}
+
+footer p a{
+    display: inline;
+    display: inline-block;
+    text-indent: -9999px;
+    background: url(../img/logo-greenpig.png) no-repeat;
+    background-size: 100%;
+    width: 85px;
+    height: 18px;
+    vertical-align:middle;
+}
+
+footer a:hover{
+    color: #e64954;
+}
+
+.footer-static-bottom {
+    position: relative;
+    opacity: 1;
+}
+
+.footer-fixed-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+}
+
+footer p a:hover{
+    opacity: 0.6;
+}

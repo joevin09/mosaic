@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15-janv.-2015, 9:34:37
+    Author     : Joévin
+*/
+
+.slide_menu footer{
+    position: fixed;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    z-index: 2000;
+    font-size: 12px;
+    font-family: @font-family-serif;
+    padding: 6px 0 7px 0;
+    width: 100%;
+    background: @my_white;
+    text-align: center;
+    small{
+        padding: 0 15px;
+        font-size: 80%;
+    }
+    a{
+        color: @my_black;
+        &.italic{
+            font-style: italic;
+        }  
+        &:hover, &:active, &:focus{
+          text-decoration: underline;
+          color: @my_brun;
+        }
+    }
+    span a{
+        color: @my_brun!important;
+    }
+}

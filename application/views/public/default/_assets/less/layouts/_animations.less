@@ -1,0 +1,95 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-mai-2015, 14:39:59
+    Author     : Joevin
+*/
+
+.animation(@arguments) {
+    -webkit-animation: @arguments;
+    -moz-animation: @arguments;
+    animation: @arguments;
+}
+
+@keyframes showUp {
+    0%{
+        transform: (translateY(30px));
+        opacity: 0;
+    }
+
+    100%{
+        transform: (translateY(0px));
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes showUp {
+    0%{
+        transform: (translateY(30px));
+        opacity: 0;
+    }
+
+    100%{
+        transform: (translateY(0px));
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes showUp {
+    0%{
+        transform: (translateY(30px));
+        opacity: 0;
+    }
+
+    100%{
+        transform: (translateY(0px));
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes showUp {
+    0%{
+        transform: (translateY(30px));
+        opacity: 0;
+    }
+
+    100%{
+        transform: (translateY(0px));
+        opacity: 1;
+    }
+}
+
+@-o-keyframes showUp {
+    0%{
+        transform: (translateY(30px));
+        opacity: 0;
+    }
+
+    100%{
+        transform: (translateY(0px));
+        opacity: 1;
+    }
+}
+
+.loop(@counter) when (@counter > -1) {
+    .loop((@counter - 1));
+    
+    @sec: @counter/5s;
+    
+    &.item-@{counter}{
+        .animation(showUp 0.1s @sec both linear);
+    }
+}
+
+@keyframes showDown {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
