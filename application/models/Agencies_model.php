@@ -30,6 +30,8 @@ class Agencies_model extends MY_Model {
             'avatar',
             'last_search_uri',
             'created',
+//            'offer',
+//            'offer_url'
         );
         $this->callback_insert = "callback_insert";
         $this->load->model('functions_model');
@@ -110,6 +112,29 @@ class Agencies_model extends MY_Model {
         $ret = FALSE;
         if (!empty($this->user->user_id)) {
             $data['user_id'] = $this->user->user_id;
+
+            $data['website'] = str_replace(array('http://', 'www.', 'https://', 'http://www.', 'https://www.'), '', $data['website']);
+
+            // Offer
+
+            if ($data['offer-1'] != "") {
+                $data['offer'] = $data['offer-1'];
+            }
+            if ($data['offer-2'] != "") {
+                $data['offer'] = $data['offer'] . "/" . $data['offer-2'];
+            }
+            if ($data['offer-3'] != "") {
+                $data['offer'] = $data['offer'] . "/" . $data['offer-3'];
+            }
+            if ($data['offer-4'] != "") {
+                $data['offer'] = $data['offer'] . "/" . $data['offer-4'];
+            }
+            
+//            var_dump($data);
+//            die();
+
+
+
             $ret = $this->insert_update($data);
             if ($ret && isset($data['functions'])) {
                 // Update functions details
@@ -135,7 +160,7 @@ class Agencies_model extends MY_Model {
             $this->load->model('cities_model');
             $city_id = $this->cities_model->get_by_slug($params['city'])->city_id;
         }
-        /**     
+        /**
          * Set search joins
          */
         // SEARCH : Functions
@@ -161,7 +186,7 @@ class Agencies_model extends MY_Model {
                     'nbr_member <' => $ranges[1],
                 ));
             } else if (is_numeric($params['nbr_member'])) {
-                $this->db->where('nbr_member >=', $params['nbr_member']);  
+                $this->db->where('nbr_member >=', $params['nbr_member']);
             }
         }
 

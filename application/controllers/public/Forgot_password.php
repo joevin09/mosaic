@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Forgot_password extends Public_Controller {
-
+    
     public function __construct() {
         parent::__construct();
         $this->load->model('users_model');
@@ -40,13 +40,15 @@ class Forgot_password extends Public_Controller {
 
     private function _send_email($email, $tmp_passwd) {
         $this->load->library('email');
-
+        
+//        print_r('EMAIL' . $email);
+//        die();
         $this->email->from('your@example.com', 'Your Name');
-        $this->email->to($email);
+        $this->email->to('joevinlicot@gmail.com');
 
         $this->email->subject("Récupération de votre mot de passe");
-        $change_pwd_url = site_url('login/change-password').'?d='.encrypt(array('email' => $email));
-        $this->email->message('Boujour ! pour modifier votre mot de passe, cliquez sur le lien suivant ' . $change_pwd_url . ' et entrez le code ci-dessous : ' . $tmp_passwd);
+        $change_pwd_url = site_url('login').'?d='.encrypt(array('email' => $email));
+        $this->email->message('Boujour ! Pour modifier votre mot de passe, cliquez sur le lien suivant ' . $change_pwd_url . ' et entrez le code ci-dessous : ' . $tmp_passwd);
 
         $this->email->send();
     }
@@ -54,7 +56,7 @@ class Forgot_password extends Public_Controller {
     private function _rules() {
         $config = array(
             array(
-                'field' => 'email',
+                'field' => 'email-forgot',
                 'rules' => 'required|valid_email|callback_check_email_exists|xss_clean',
             ),
         );

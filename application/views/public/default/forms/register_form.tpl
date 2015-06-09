@@ -2,7 +2,7 @@
 
 
     <h4 class="col-sm-8">Formulaire postulant</h4>
-    <div class="col-sm-6 form-group<{if form_error('last_name')}> has-error<{/if}>">
+    <div class="col-sm-6 <{if form_error('last_name')}> has-error<{/if}>">
         <label for="last_name">Nom</label>
         <div>
             <input type="text" name="last_name" placeholder="Nom" id="last_name" value="<{$form['last_name']}>" required="required" class="form-control" />
@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="col-sm-6 form-group<{if form_error('first_name')}> has-error<{/if}>">
+    <div class="col-sm-6<{if form_error('first_name')}> has-error<{/if}>">
         <label for="first_name">Prénom</label>
         <div>
             <input type="text" name="first_name" placeholder="Prénom" id="first_name" value="<{$form['first_name']}>" required="required" class="form-control" />

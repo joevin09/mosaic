@@ -1,7 +1,7 @@
 <{block name="page-title"}>404<{/block}>
 <{block name="content"}>
     <div class="pres pres-register error">
-        <h2>Erreur</h2>
+        <h2 class="agency_h2">Erreur</h2>
         <h3><span>404</span> | La page <br />n'a pas été trouvée !</h3>
         <p>Aucun profil par ici, tu as dû te perdre<br /> dans tes recherches.</p>
         <a href="<{site_url()}>">Retour à la mosaic</a>

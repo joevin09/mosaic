@@ -4,7 +4,7 @@
     <{if $this->user->user_id > 0}>
         <{if count($list) > 0}>
 
-            <ol class="breadcrumb">
+            <ol class="breadcrumb bread">
                 <{foreach from=$breadcrumb item=v}>
                     <li>
                         <{if $v['active']}>
@@ -16,7 +16,7 @@
                 <{/foreach}>
             </ol>
             <div class="pres pres-register membres">
-                <h2><{$select_head_title}></h2>
+                <h2 class="agency_h2"><{$select_head_title}></h2>
                 <h3><{$select_h3}></h3>
                 <p><{$select_p}></p>
                 <div class="select-profil">
@@ -27,7 +27,7 @@
                         <{/foreach}>
                     </select>
                 </div>
-                <div class="back" onclick="history.back();"><i class="fa fa-long-arrow-left"></i> Etape précédente</div>
+                <div class="back" onclick="history.back();"><i class="fa fa-long-arrow-left"></i> Étape précédente</div>
             </div>
 
             <div class="motif motif-register hidden-xs hidden-sm hidden-md">
@@ -56,7 +56,7 @@
                 </ul>
             </div>
         <{else}>
-            <ol class="breadcrumb">
+            <ol class="breadcrumb bread">
                 <{foreach from=$breadcrumb item=v}>
                     <li>
                         <{if $v['active']}>
@@ -68,11 +68,11 @@
                 <{/foreach}>
             </ol>
             <div class="pres pres-register membres">
-                <h2>Désolé</h2>
+                <h2 class="agency_h2">Désolé</h2>
                 <h3>Aucune recherche ne correspond !</h3>
                 <p>Cherches parmis les profils ou inscris-toi pour recevoir les offres te correspondants.
                 </p>
-                <a href="<{site_url('mosaic')}>">Ta mosaic</a>
+                <a class="padding-bottom" href="<{site_url('mosaic')}>">Ta mosaic</a>
                 <div class="back" onclick="history.back();"><i class="fa fa-long-arrow-left"></i> Retour à la recherche</div>
             </div>
 
@@ -106,7 +106,7 @@
         <{/if}>
     <{else}>
         <{if count($list) > 0}>
-            <ol class="breadcrumb">
+            <ol class="breadcrumb bread">
                 <{foreach from=$breadcrumb item=v}>
                     <li>
                         <{if $v['active']}>
@@ -118,7 +118,7 @@
                 <{/foreach}>
             </ol>
             <div class="pres pres-register membres">
-                <h2><{$select_head_title}></h2>
+                <h2 class="agency_h2"><{$select_head_title}></h2>
                 <h3><{$select_h3}></h3>
                 <p><{$select_p}></p>
                 <div class="select-profil">
@@ -129,7 +129,7 @@
                         <{/foreach}>
                     </select>
                 </div>
-                <div class="back" onclick="history.back();"><i class="fa fa-long-arrow-left"></i> Etape précédente</div>
+                <div class="back" onclick="history.back();"><i class="fa fa-long-arrow-left"></i> Étape précédente</div>
             </div>
 
             <div class="motif motif-register hidden-xs hidden-sm hidden-md">
@@ -158,7 +158,7 @@
                 </ul>
             </div>
         <{else}>
-            <ol class="breadcrumb">
+            <ol class="breadcrumb bread">
                 <{foreach from=$breadcrumb item=v}>
                     <li>
                         <{if $v['active']}>
@@ -170,11 +170,11 @@
                 <{/foreach}>
             </ol>
             <div class="pres pres-register membres">
-                <h2>Désolé</h2>
+                <h2 class="agency_h2">Désolé</h2>
                 <h3>Aucune recherche ne correspond !</h3>
                 <p>Cherches parmis les profils ou inscris-toi pour recevoir les offres te correspondants.
                 </p>
-                <a href="<{site_url('register')}>?register_mode=user">Inscription</a>
+                <a class="padding-bottom" href="http://m-saic.be/register/?register_mode=agency">Inscription</a>
                 <div class="back" onclick="history.back();"><i class="fa fa-long-arrow-left"></i> Retour à la recherche</div>
             </div>
 

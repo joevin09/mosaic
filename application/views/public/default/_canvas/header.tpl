@@ -18,6 +18,10 @@
         <link href="<{assets('vendor/fontawesome/css/font-awesome.min.css')}>" rel="stylesheet" type="text/css"/>
         <link rel="icon" type="image/png" href="<{assets('img/favicon.png')}>" />
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <meta property="og:title" content="Mosaic" />
+        <meta property="og:type" content="Plateforme de recherche du milieu web" />
+        <meta property="og:url" content="http://m-saic.be/" />
+        <meta property="og:image" content="http://joevinlicot.be/share.jpg" />
         <!--[if lt IE 9]>
           <script src="<{assets('js/vendor/html5shiv.js')}>"></script>
                      <script src="<{assets('js/vendor/respond.min.js')}>"></script>
@@ -31,7 +35,7 @@
     <{/if}>
 
     <{if $member->town != "" && $member->agency_name != ""}>
-       <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>    
+        <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>    
     <{/if}>
     <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
 </head>

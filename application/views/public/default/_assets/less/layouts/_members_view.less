@@ -10,11 +10,11 @@ and open the template in the editor.
 
 .profil-poeple{
     h2{
-        font-size: 20px!important;
-        text-transform: none;
-        color: @my_black;
+        /*        font-size: 20px!important;
+                text-transform: none;
+                color: @my_black;*/
         &:after{
-            display: none!important;
+            margin: 15px 0 5px 0!important;
         }
     }
     button{
@@ -36,19 +36,28 @@ and open the template in the editor.
     }
     .fonction{
         font-weight: 700;
+        font-style: italic;
+        padding-top: 0!important;
     }
     .city{
         color: @my_brun;
-        padding: 2px 0!important;
+        padding: 56px 0 2px 0!important;
     }
     .website{
         text-transform: uppercase;
         display: block;
-        margin-bottom: 10px;
         color: @my_brun;
         font-family: @font-family-sans-serif;
-        font-size: 12px;
-        clear: both;
+        font-size: 14px;
+        clear: both; 
+        span{ 
+            padding-left: 30px!important;
+        }
+        .fa-laptop{
+            position: absolute;
+            font-size: 19px;
+            top: 1px;
+        }
     }
 }
 
@@ -78,6 +87,8 @@ and open the template in the editor.
 
 .profil-poeple .about{
     padding-top: 0!important;
+    display: inline-block;
+    padding: 5px 10px 15px 0!important;
 }
 
 .capacite{
@@ -140,7 +151,15 @@ and open the template in the editor.
             list-style: none;
             background: @my_brun;
             float: left;
+            font-size: 13px;
             margin-right: 30px;
+            text-transform: capitalize;
+            color: @my_white;
+            text-align: center;
+            padding-top: 40px!important;
+            padding: 10px;
+
+
             &:nth-child(6n+7){
                 clear: both;
             }
@@ -224,7 +243,6 @@ and open the template in the editor.
     height: auto;
     min-height:453px;
     left: 27px;
-    padding-bottom: 170px;
     img{
         position: absolute;
         top: 0;
@@ -234,7 +252,15 @@ and open the template in the editor.
     .formation-text{
         z-index: 500;
         position: relative;
+        p{
+            text-transform:  capitalize;
+            margin-bottom: 5px;  
+        }
     }
+}
+
+.formation-postulant{ 
+    padding-bottom: 180px;
 }
 
 .fa-plus{
@@ -285,8 +311,7 @@ and open the template in the editor.
 
 .link-modif-profil{
     position: relative;
-    display: inline;
-    display: inline-block;
+  
     .fa-pencil{
         position: absolute;
         top: 35px;
@@ -431,15 +456,6 @@ and open the template in the editor.
     top: 0;
     margin-top: -100px;
 }
-.cityexperience{
-    top: 0;
-    margin-top: -100px;
-    select{ 
-        width: auto;
-        padding-right: 50px;
-        background-color: @my_gray;
-    }
-}
 
 .btn-choose.link-modif-profil.modif-your-profil{
     top: 0;
@@ -449,7 +465,7 @@ and open the template in the editor.
         top:41px;
     }
     button{
-      padding-top: 28px!important;  
+        padding-top: 28px!important;  
     }
     a,button{ 
         border: 2px solid @my_brun;
@@ -466,75 +482,117 @@ and open the template in the editor.
     }
 }
 
-.poeple-modif .change-profil input{
+.poeple-modif .change-profil input,.poeple-modif .change-profil textarea{
     border-bottom: 1px solid @my_black !important;
 }
 
+.poeple-modif .change-profil textarea{
+    border: none;
+    border-radius: 0;
+    box-shadow:none;
+}
+
+.img-profil:hover .modif-profil-avatar.modif-profil-avatar{
+    display: none;
+}
+
+.modif-profil-avatar.modif-profil-avatar{
+    position: absolute;
+    background: rgba(255,255,255,0.8);
+    width: 100%;
+    color: @my_black;
+    z-index: 100;
+    left: 0;
+    font-size: 12px;
+    bottom: 0;
+    padding-left:10px!important;
+    padding-right:10px!important;
+    text-transform: none;
+    text-align: center;
+}
+
+#map-canvas{
+    height: 400px;
+    width: 400px;
+    position: relative;
+    left: 300px;
+    margin-top: -200px;
+    margin-bottom: 80px;
+    border: 3px solid @my_white;
+}
+
+.formation span a{
+    color:@my_brun;
+}
+
+.no-margin{
+    margin-bottom: 5px!important;
+}
 
 /*RADIO*/
 /*
 input[type=radio] {
-	visibility: hidden;
+        visibility: hidden;
 }
 
 .squaredThree {
-	width: 20px;	
-	margin: 20px auto;
-	position: relative;
+        width: 20px;	
+        margin: 20px auto;
+        position: relative;
 }
 
 .squaredThree label {
-	cursor: pointer;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	top: 0;
-	border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        border-radius: 4px;
 
-	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
-	-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
-	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+        -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+        -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
 
-	background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
-	background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
-	background: -o-linear-gradient(top, #222 0%, #45484d 100%);
-	background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
-	background: linear-gradient(top, #222 0%, #45484d 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+        background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
+        background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
+        background: -o-linear-gradient(top, #222 0%, #45484d 100%);
+        background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
+        background: linear-gradient(top, #222 0%, #45484d 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
 }
 
 .squaredThree label:after {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
-	opacity: 0;
-	content: '';
-	position: absolute;
-	width: 9px;
-	height: 5px;
-	background: transparent;
-	top: 4px;
-	left: 4px;
-	border: 3px solid #fcfff4;
-	border-top: none;
-	border-right: none;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 5px;
+        background: transparent;
+        top: 4px;
+        left: 4px;
+        border: 3px solid #fcfff4;
+        border-top: none;
+        border-right: none;
 
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
 }
 
 .squaredThree label:hover::after {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-	filter: alpha(opacity=30);
-	opacity: 0.3;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+        filter: alpha(opacity=30);
+        opacity: 0.3;
 }
 
 .squaredThree input[type=checkbox]:checked + label:after {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(opacity=100);
-	opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
 }*/
 
 

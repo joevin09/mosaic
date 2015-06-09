@@ -12,32 +12,20 @@ and open the template in the editor.
     select{
         opacity: 0;
     }
-/*    
-    input[type="checkbox"]{
-        display: none;
-    }*/
-    
+    /*    
+        input[type="checkbox"]{
+            display: none;
+        }*/
+
     label{
         color: #fff!important;
     }
-    
+
     &.active{
         select{
             opacity: 1;
         }
     }
-}
-
-.competences-content{
-    #competences{
-        display: none;
-    }
-}
-
-.no-js .competences-content{
-   #competences{
-        display: block;
-    } 
 }
 
 .poeple-modif .avatar-modif{
@@ -53,7 +41,7 @@ and open the template in the editor.
         cursor: pointer;
         overflow: hidden;
         padding: 0!important;
-        
+
         &:after{
             position: absolute;
             width: 100%;
@@ -68,16 +56,300 @@ and open the template in the editor.
             font-size: 24px;
             padding: 63px 65px;
             opacity: 0;
-            
+
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             -ms-transition: all 0.3s;
             -o-transition: all 0.3s;
             transition: all 0.3s;
         }
-        
+
         &:hover:after{
             opacity: 1;
         }
     }
+}
+
+.ecra-bread{
+    margin-top: 30px!important;
+
+}
+
+.ecra-left{
+    margin-right: 90px!important;  
+}
+
+.no-padding{
+    margin-bottom: 5px!important;
+}
+
+.move-h-mosaic{
+    left: 68px!important;
+}
+
+.move-all-h-mosaic{
+    left: 132px!important;
+}
+
+.move-h-mosaic-agency-finish{
+    left: 88px!important;
+}
+
+.move-h-mosaic-agency{
+    left: 78px!important;
+}
+
+.move-all-h-mosaic-agency{
+    left: 133px!important;
+}
+
+.h3-bread{
+    margin-bottom: 25px;
+}
+
+.move-retour{
+    margin-top: 9px;
+}
+
+.capacite{
+    margin-bottom: 84px;
+}
+
+
+.modal-content {
+    box-shadow: none;
+    .beco-white{
+        color:@my_white;
+    }
+}
+
+.modal-body{
+    padding: 0px;
+}
+
+.modal-content {
+    position: relative;
+    padding: 30px;
+    background-color: @my_black;;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    width: 400px;
+    h4, label{
+        color: @my_white;
+    }
+}
+
+.close {
+    text-shadow: none; 
+    opacity: 1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    span{
+        color: @my_black; 
+        position: relative;
+        top: -64px;
+        left: 20px;
+    }
+    &:hover{
+        color:@my_white;
+    }
+}
+
+.modal-header {
+    border-bottom: 0;
+    padding: 0px; 
+    min-height: 0px; 
+
+}
+
+.modal-body span{
+    color:@my_brun;
+}
+
+.modal-dialog {
+    width: 400px;
+    margin: 160px auto;
+}
+
+.log{
+    padding-top: 100px;
+}
+
+.modal-backdrop.in {
+    opacity: 0.95;
+
+}
+.modal-backdrop {
+    background-color: @my_white;
+}
+
+.modal-footer {
+    border-top: 0;
+    padding: 0px;
+
+}
+
+.modal-content 
+{
+    label {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 5px 0; 
+        color: #ffffff; 
+        text-transform: uppercase; 
+    }
+    h4{ 
+        color: #231f20;
+        font-weight: 700;
+        font-size: 16px;
+        position: absolute;
+        left:10px;
+        top: -35px;
+        margin-bottom: 20px;
+        font-family: "Droid Serif", Georgia, Times, serif;
+        &:before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 2px;
+            background: #231f20;
+            float: left;
+            margin: 10px 8px 5px 0;
+        }
+    }
+    input, textarea {
+        background: #ffffff;
+        border: none;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        float: left;
+        padding: 6px 10px;
+        margin-bottom: 5px;
+    }
+}
+
+.annul-design{
+    width: 100%;
+    float: none;
+    text-align: left;
+    border: none;
+    background: none;
+    color:@my_white;
+    margin-top: 10px;
+    font-family:@font-family-serif;
+    &:hover{
+        color:@my_brun;
+    }
+}
+
+
+.send-design {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    float: left;
+    background: #231f20!important;
+    border: 2px solid #9f8e70!important;
+    padding: 10px 60px;
+    z-index: 100;
+    margin-bottom: 0;
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.send-design:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background: #231f20!important;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.send-design:hover:before {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+}
+.send-design:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #9f8e70;
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.email-js{
+    margin-top: 20px;
+    display: none!important;
+}
+
+.no-js .email-js{
+    display: block!important;
+}
+
+.no-js .contact-me{
+    display: none;
+}
+
+.forgot-title{
+    left: 10px!important;
+    top: -35px!important;
+    &:before{
+        margin-top: 10px!important;
+    }
+}
+
+.forgot{
+    cursor: pointer;
+}
+
+.change{
+    padding: 10px 0!important;
+    margin: 0!important;
+      font-size: 12px;
+}  
+
+.annul-design {
+  width: auto;
+  float: none;
+  text-align: left;
+  border: none;
+  clear: both;
+  background: none;
+  color: #ffffff;
+  margin-top: 15px;
+  padding-top: 10px;
+  margin-left: -4px;
+  font-family: "Droid Serif", Georgia, Times, serif;
+  display: block;
 }

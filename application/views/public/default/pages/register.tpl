@@ -1,7 +1,7 @@
 <{block name="page-title"}>Inscription<{/block}>
 <{block name="content"}>
     <div class="pres pres-register">
-        <h2>Inscription</h2>
+        <h2 class="agency_h2">Inscription</h2>
         <h3>Toi aussi,<br /> tu veux faire partie de<br /> la <span>mosaic</span>.</h3>
         <p>Enregistre ton profil en temps que postulant<br/> ou agence.</p>
             <{if !$this->input->get('register_mode')}>

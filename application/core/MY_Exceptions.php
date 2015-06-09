@@ -3,8 +3,6 @@
 class MY_Exceptions extends CI_Exceptions {
 
     public function show_404($page = '', $log_error = TRUE) {
-        header("Location: http://m-saic.be/");
-        die();
         if (is_cli()) {
             $heading = 'Not Found';
             $message = 'The controller/method pair you requested was not found.';

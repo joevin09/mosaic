@@ -2,7 +2,7 @@
 
 <{block name="content"}>
     <div class="pres pres-register">
-        <h2>Connection</h2>
+        <h2 class="agency_h2">Connection</h2>
         <h3>Consulte les profils ajoutés à ta <span>mosaic</span>.</h3>
         <p>Connecte toi, rejoint ta mosaic et<br/> affiche les nouveaux profils qui te correspondent.</p>
     </div>

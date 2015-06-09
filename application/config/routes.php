@@ -77,7 +77,7 @@ if (!defined('BASEPATH'))
  */
 
 $route['default_controller'] = "public/home";
-$route['404_override'] = 'public/errors/error_404';
+$route['404_override'] = 'errors/error_404';
 $route['translate_uri_dashes'] = TRUE;
 
 // Parser routes

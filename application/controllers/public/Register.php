@@ -35,6 +35,8 @@ class Register extends Public_Controller {
             $insert_data = $this->input->post();
             $insert_data['last_search_uri'] = $this->session->userdata('search_query');
             $this->load->model('users_model');
+//            echo '<pre>' . var_dump($insert_data) . '</pre>';
+//            die();
             if ($user_id = $this->users_model->insert_update($insert_data)) {
                 // Send confirmation email
                 $headers = 'From: Mosaic' . "\r\n" . 'Reply-To: mosaic@m-saic.be';
@@ -52,13 +54,13 @@ class Register extends Public_Controller {
                 mail($this->input->post('email'), 'Inscription réussite', implode(PHP_EOL, $message),$headers);
                 // Prepare redirect
                 $this->session->set_userdata('user_id', $user_id);
-                redirect(site_url());
+                redirect(site_url('mosaic'));
                 exit;
             }
         }
     }
     
-    private function _manage_register_agency() {
+        private function _manage_register_agency() {
         $this->_rules_agency();
         if ($this->form_validation->run()) {
             // Insert in database HERE !
@@ -70,18 +72,27 @@ class Register extends Public_Controller {
                 'email' => $this->input->post('agency_email'),
                 'last_search_uri' => $this->session->userdata('search_query'),
             );
-            $this->load->model('users_model');
-            if ($user_id = $this->users_model->insert_update($insert_data)) {
+            
+            $this->load->model('agencies_model');
+//            echo '<pre>' . var_dump($insert_data, true) . '</pre>';
+            if ($user_id = $this->agencies_model->insert_update($insert_data)) {
                 // Send confirmation email
+                $headers = 'From: Mosaic' . "\r\n" . 'Reply-To: mosaic@m-saic.be';
                 $message = array(
-                    'Bonjour,',
+                    'Bonjour' . ' '. $this->input->post('first_name') . ' ' . $this->input->post('last_name') . ',',
                     '',
-                    'Vous étes bien inscrit sur le site mosaic.'
+                    'Tu es bien inscrit sur le site mosaic.',
+                    '',
+                    'Connecte-toi : http://m-saic.be/login/',
+                    '',
+                    'Bien à toi,',
+                    '',
+                    "L'équipe Mosaic"
                 );
-                mail($this->input->post('email'), 'Inscription réussite', implode(PHP_EOL, $message));
+                mail($this->input->post('email'), 'Inscription réussite', implode(PHP_EOL, $message),$headers);
                 // Prepare redirect
                 $this->session->set_userdata('user_id', $user_id);
-                redirect(site_url("profil"));
+                redirect(site_url('mosaic'));
                 exit;
             }
         }

@@ -3,6 +3,42 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
+
+//$url = $_SERVER[REQUEST_URI];
+//$url = explode('/', $url);
+//$flag = 0;
+//
+//print_r($url);
+//
+//foreach($url as $k){
+//    print_r($k . " ");
+//    
+//    if($flag == 2 && $k != ""){
+//        if($k != "function"){
+//            die();
+//        }
+//    } else if($flag == 3 && $k != ""){
+//        
+//        if($k != "design-web" || $k != "developpement-web" || $k != "seo-sem" || $k != "gestion-de-projets" || $k != "marketing" || $k != "reseau" || $k != "autres"){
+//            die();
+//        }
+//        
+//    } else if($flag == 4 && $k != ""){
+//        if($k != "city"){
+//            die();
+//        }
+//        
+//    } else if($flag == 5 && $k != ""){
+//        if($k != "nbr_member"){
+//             die();
+//        }
+//    }
+//    
+//    print_r($flag);
+//    
+//    $flag++;
+//}
+
 class Search_agencies {
 
     private $data = array();
@@ -16,7 +52,7 @@ class Search_agencies {
         $this->CI->load->model('cities_model');
         $this->index($config);
     }
-    
+
     public function index($config = "") {
         // Get search query
         $this->search = $this->CI->uri->ruri_to_assoc();
@@ -27,7 +63,6 @@ class Search_agencies {
             }
             $this->search = array_merge($this->search, $config['search']);
         }
-//        echo '<pre>$this->search: ' . print_r($this->search, true) . '</pre>';
         // Save last search query url
         if ($this->CI->router->fetch_class() === "search_agency") {
             $last_search_query = preg_replace('#^' . $this->CI->router->fetch_class() . '/#i', '', $this->CI->uri->uri_string());
@@ -38,24 +73,27 @@ class Search_agencies {
                     'last_search_uri' => $last_search_query,
                 );
                 $this->CI->agencies_model->insert_update($update_data);
+//                echo '<pre>$this->search: ' . print_r($update_data) . '</pre>';
+//                die;
             }
         }
         // Query the different steps
         $step_counter = 0;
-        if (empty($this->search)) { 
+        if (empty($this->search)) {
             // Aucun élément dans l'URL donc pas encore de recherche
             $this->_search();
-            
         }
         foreach ($this->search AS $field => $value) {
-            
+
             if ($field !== $this->CI->router->fetch_class()) {
-                $this->data["search" . $field] = $value;
+                $this->data["search_" . $field] = $value;
             }
             if ($step_counter == (count($this->search) - 1)) {
                 // Dès qu'on a une recherche, on prend le dernier $field - l'avant dernier $field est à l'offest -2 car on commence à 0 et non à 1
                 $method_name = "_" . $field;
-                $this->{$method_name}();
+                if (method_exists($this, $method_name)) {
+                    $this->{$method_name}();
+                }
             }
             $step_counter++;
         }
@@ -71,7 +109,7 @@ class Search_agencies {
         $this->data['breadcrumb'] = array(
             array(
                 'slug' => 'function',
-                'name' => '1 | Fonction',
+                'name' => '1 | Secteur',
             ),
             array(
                 'slug' => 'city',
@@ -93,7 +131,7 @@ class Search_agencies {
                     $previous_link = $this->data['breadcrumb'][$k - 1]['url'];
                     $v['url'] = $previous_link . $slug . '/' . $value . '/';
                     $str = str_replace('-', ' ', $value);
-                    $this->data['breadcrumb'][$k - 1]['name'] = $k . ' | ' . $str;
+                    $this->data['breadcrumb'][$k - 1]['name'] = $k . ' | ' . UcFirstAndToLower($str);
                 }
                 if ($v['slug'] === $this->data['current_breadcrumb']) {
                     break;
@@ -113,11 +151,11 @@ class Search_agencies {
             $v->url_value = $this->_create_url('function', $v->function_slug);
         }
         $this->data['current_breadcrumb'] = 'function';
-        $this->data['select_title'] = "Fonctions";
-        $this->data['select_page_title'] = "Fonctions";
-        $this->data['select_head_title'] = "Fonctions";
-        $this->data['select_h3'] = "Quelle fonction cherches-tu ?";
-        $this->data['select_p'] = "Partage nous cette fonction afinde faire la meilleure recherche.";
+        $this->data['select_title'] = "Secteurs";
+        $this->data['select_page_title'] = "Secteurs";
+        $this->data['select_head_title'] = "Secteurs";
+        $this->data['select_h3'] = "Dans quel secteur cherches-tu ?";
+        $this->data['select_p'] = "Partage nous ce secteur afin de faire la meilleure recherche.";
         $this->data['field_name_value'] = "function_name";
     }
 
@@ -153,8 +191,8 @@ class Search_agencies {
         $this->data['select_title'] = "Nombre de membre";
         $this->data['select_page_title'] = "Nombre de membre";
         $this->data['select_head_title'] = "Nombre de membre";
-        $this->data['select_h3'] = "De combien de membres est composé l'équipe ?";
-        $this->data['select_p'] = "Tu cherches un postulant avec un statut particulier pour ton entreprise :";
+        $this->data['select_h3'] = "Quel est la grandeur de l'agence ?";
+        $this->data['select_p'] = "Tu cherches une agence composée de combien de personne :";
         $this->data['field_name_value'] = "nbr_member_name";
     }
 

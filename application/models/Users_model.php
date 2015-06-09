@@ -35,6 +35,7 @@ class Users_model extends MY_Model {
             'process_date',
             'offer',
             'offer_url'
+           
         );
         $this->callback_insert = "callback_insert";
         $this->load->model('functions_model');
@@ -119,9 +120,9 @@ class Users_model extends MY_Model {
             $competences = $data['competences'];
             $str = str_replace(array('-', ';', ','), ' ', $competences);
             
-            $data[''] = str_replace(array('http://', 'www.', 'https://', 'http://www.', 'https://www.'), '', $data['website']);
+            $data['website'] = str_replace(array('http://', 'www.', 'https://', 'http://www.', 'https://www.'), '', $data['website']);
          
-            
+            $data['passwd'] = sha1($data['passwd']);
             // Process
             
             if ($data['process-1'] != "") {
@@ -132,9 +133,6 @@ class Users_model extends MY_Model {
             }
             if ($data['process-3'] != "") {
                 $data['process'] = $data['process'] . "/" . $data['process-3'];
-            }
-            if ($data['process-4'] != "") {
-                $data['process'] = $data['process'] . "/" . $data['process-4'];
             }
             
             // Aujrd
@@ -151,18 +149,48 @@ class Users_model extends MY_Model {
                 $data['process-3-date-2'] = $data['today-3'];
             }
 
-            if ($data['today-4'] != "") {
-                $data['process-4-date-2'] = $data['today-4'];
-            }
-            
-            
 
-            $data['process_date'] = $data['process-1-date-1'] . " " . $data['process-1-date-2'] . " " . $data['process-2-date-1'] . " " . $data['process-2-date-2'] . " " . $data['process-3-date-1'] . " " . $data['process-3-date-2'] . " " . $data['process-4-date-1'] . " " . $data['process-4-date-2'];
+            $data['process_date'] = $data['process-1-date-1'] . " " . $data['process-1-date-2'] . " " . $data['process-2-date-1'] . " " . $data['process-2-date-2'] . " " . $data['process-3-date-1'] . " " . $data['process-3-date-2'];
             
-            print_r($data['process_date']);
-            
+//            print_r($data['process_date']);
+//            
 
             $data['competences'] = $str;
+            
+            
+            
+            // Agency Offert
+            
+            if ($data['offer-1'] != "") {
+                $data['offer'] = $data['offer-1'];
+            }
+            if ($data['offer-2'] != "") {
+                $data['offer'] = $data['offer'] . "/" . $data['offer-2'];
+            }
+            if ($data['offer-3'] != "") {
+                $data['offer'] = $data['offer'] . "/" . $data['offer-3'];
+            }
+            if ($data['offer-4'] != "") {
+                $data['offer'] = $data['offer'] . "/" . $data['offer-4'];
+            }
+            
+            if ($data['offerurl-1'] != "") {
+                $data['offer_url'] = $data['offerurl-1'];
+            }
+            if ($data['offerurl-2'] != "") {
+                $data['offer_url'] = $data['offer_url'] . " " . $data['offerurl-2'];
+            }
+            if ($data['offerurl-3'] != "") {
+                $data['offer_url'] = $data['offer_url'] . " " . $data['offerurl-3'];
+            }
+            if ($data['offerurl-4'] != "") {
+                $data['offer_url'] = $data['offer_url'] . " " . $data['offerurl-4'];
+            }
+            
+            if($data['offer_url']){
+                $data['offer_url'] = str_replace(array('http://', 'www.', 'https://', 'http://www.', 'https://www.'), '', $data['offer_url']);
+            }
+           
 
             $ret = $this->insert_update($data);
             if ($ret && isset($data['functions'])) {

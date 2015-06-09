@@ -72,8 +72,8 @@ class MY_Form_validation extends CI_Form_validation {
     }
 
     public function required_image(&$str) {
-        echo '<pre>$str: ' . print_r($str, true) . '</pre>';
-        die();
+        //echo '<pre>$str: ' . print_r($str, true) . '</pre>';
+        //die();
         $ret = FALSE;
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png';

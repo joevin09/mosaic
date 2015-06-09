@@ -8,34 +8,35 @@ and open the template in the editor.
     Author     : Joevin
 */
 
-@media (max-width: 1200px)
+@media (max-width: 1199px)
 {
     #postulant .img_post{
-        left: 420px!important;
+        left: 355px!important;
         bottom: 180px!important;
     }
     .img_post{
         h4{
-            bottom: 90px!important;
+            left: 62px!important;
+            bottom: 240px!important;
         }
     }
     .content{
         height: 700px;
     }
     #postulant .last_register_home {
-        bottom: -10px!important;
+        bottom: 60px!important;
         left: 50px!important;
     }
     #agency .img_post {
-        bottom: 180px!important;
-        left: 80px!important;
+          margin-left: -65px!important;
+  top: 200px!important;
     }
     #postulant{
         margin-bottom: 70px!important;
     }
     #agency .last_register_home {
-        bottom:-10px!important;
-        left: 0px!important;
+        bottom: 100px !important;
+  left: 75px!important;
     }
 }
 
@@ -195,11 +196,6 @@ and open the template in the editor.
     z-index: 10;
     display: inline-block;
     opacity: 1;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
 }
 
 /*#postulant .img_postclass, #agency .img_postclass{
@@ -247,7 +243,7 @@ and open the template in the editor.
     bottom: 45px;
     left: 0px;
     h4{
-        left: 132px;
+        left: 52px;
         bottom: 220px;
     }
 }
@@ -359,25 +355,20 @@ and open the template in the editor.
                 }
             }
         }
+    }
+}
 
-        &:hover{
-            img{
-                opacity: 0.5;
-                -webkit-transition: all 0.3s;
-                -moz-transition: all 0.3s;
-                -ms-transition: all 0.3s;
-                -o-transition: all 0.3s;
-                transition: all 0.3s;
-            }
+.last_register_home ul{
+    &:hover{
 
-            .active img{
-                opacity: 1;
-                -webkit-transition: all 0.3s;
-                -moz-transition: all 0.3s;
-                -ms-transition: all 0.3s;
-                -o-transition: all 0.3s;
-                transition: all 0.3s;
-            }
+
+        .active img{
+            opacity: 1;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
         }
     }
 }
@@ -420,6 +411,26 @@ and open the template in the editor.
     -webkit-animation-iteration-count:1;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
+    
+    -o-animation-duration: .4s;
+    -o-animation-iteration-count:1;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-fill-mode: forwards;
+    
+    -moz-animation-duration: .4s;
+    -moz-animation-iteration-count:1;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-fill-mode: forwards;
+    
+    -ms-animation-duration: .4s;
+    -ms-animation-iteration-count:1;
+    -ms-animation-timing-function: ease-in-out;
+    -ms-animation-fill-mode: forwards;
+    
+    animation-duration: .4s;
+    animation-iteration-count:1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 
@@ -431,6 +442,18 @@ and open the template in the editor.
 
     -webkit-animation-name: l1;
     -webkit-animation-delay: 0s;
+    
+   animation-name: l1;
+   animation-delay: 0s;
+    
+    -ms-animation-name: l1;
+    -ms-animation-delay: 0s;
+    
+    -moz-animation-name: l1;
+    -moz-animation-delay: 0s;
+    
+    -o-animation-name: l1;
+    -o-animation-delay: 0s;
 }
 
 .l2 {
@@ -440,6 +463,17 @@ and open the template in the editor.
     height: 3px;
     -webkit-animation-name: l2;
     -webkit-animation-delay: .3s;
+       animation-name: l2;
+   animation-delay: .3s;
+    
+    -ms-animation-name: l2;
+    -ms-animation-delay: .3s;
+    
+    -moz-animation-name: l2;
+    -moz-animation-delay: .3s;
+    
+    -o-animation-name: l2;
+    -o-animation-delay: .3s;
 }
 
 .l3 {
@@ -449,6 +483,18 @@ and open the template in the editor.
     width: 3px;
     -webkit-animation-name: l3;
     -webkit-animation-delay: .6s;
+    
+       animation-name: l3;
+   animation-delay: .6s;
+    
+    -ms-animation-name: l3;
+    -ms-animation-delay: .6s;
+    
+    -moz-animation-name: l3;
+    -moz-animation-delay: .6s;
+    
+    -o-animation-name: l3;
+    -o-animation-delay: .6s;
 }
 
 .l4 {
@@ -458,7 +504,20 @@ and open the template in the editor.
     height: 3px;
     -webkit-animation-name: l4;
     -webkit-animation-delay: 0.9s;
+    
+       animation-name: l4;
+   animation-delay: 0.9s;
+    
+    -ms-animation-name: l4;
+    -ms-animation-delay: 0.9s;
+    
+    -moz-animation-name: l4;
+    -moz-animation-delay: 0.9s;
+    
+    -o-animation-name: l4;
+    -o-animation-delay: 0.9s;
 }
+
 @-webkit-keyframes l1 {
     0%    { height: 0; background: @my_brun; }
     100%  { height: 280px; background: @my_brun; }
@@ -479,12 +538,63 @@ and open the template in the editor.
     100%  { width: 280px; background: @my_brun; }
 }
 
-@-webkit-keyframes l4 {
+@-moz-keyframes l1 {
+    0%    { height: 0; background: @my_brun; }
+    100%  { height: 280px; background: @my_brun; }
+}
+
+@-moz-keyframes l2 {
     0%    { width: 0; background: @my_brun; }
     100%  { width: 280px; background: @my_brun; }
 }
 
+@-moz-keyframes l3 {
+    0%    { height: 0; background: @my_brun; }
+    100%  { height: 280px; background: @my_brun; }
+}
+
+@-moz-keyframes l4 {
+    0%    { width: 0; background: @my_brun; }
+    100%  { width: 280px; background: @my_brun; }
+}
+
+
 .my_img_post{
     left: 30px;
     margin-top: -45px;
+}
+
+.offre-square{
+    width: 10px;
+    text-indent: -9999px;
+    height: 10px;
+    background: @my_brun;
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+}
+
+.offre-text{
+    p{
+        font-size: 12px;
+        margin-top: 10px;
+        padding-left: 20px;
+        position: relative;
+        span{
+            width: 10px;
+            height: 10px;
+            background: @my_brun;  
+            position: absolute;
+            top:2px;
+            left: 0px;
+        }
+    }
+}
+
+.last_register_home_agency{
+      bottom: 127px!important;
+}
+
+.my_h4_agency{
+      bottom: 256px!important;
 }

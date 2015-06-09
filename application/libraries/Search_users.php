@@ -54,7 +54,9 @@ class Search_users {
             if ($step_counter == (count($this->search) - 1)) {
                 // Dès qu'on a une recherche, on prend le dernier $field - l'avant dernier $field est à l'offest -2 car on commence à 0 et non à 1
                 $method_name = "_" . $field;
-                $this->{$method_name}();
+                if (method_exists($this, $method_name)) {
+                    $this->{$method_name}();
+                }
             }
             $step_counter++;
         }
@@ -85,7 +87,8 @@ class Search_users {
                 'name' => '3 | Statut',
             ),
         );
-        
+
+
         if (!empty($this->search)) {
             foreach ($this->data['breadcrumb'] AS $k => &$v) {
                 //var_dump($v);
@@ -96,7 +99,7 @@ class Search_users {
                     $previous_link = $this->data['breadcrumb'][$k - 1]['url'];
                     $v['url'] = $previous_link . $slug . '/' . $value . '/';
                     $str = str_replace('-', ' ', $value);
-                    $this->data['breadcrumb'][$k - 1]['name'] = $k . ' | ' . $str;
+                    $this->data['breadcrumb'][$k - 1]['name'] = $k . ' | ' . UcFirstAndToLower($str);
                 }
                 if ($v['slug'] === $this->data['current_breadcrumb']) {
                     break;
@@ -122,7 +125,7 @@ class Search_users {
         $this->data['select_page_title'] = "Fonctions";
         $this->data['select_head_title'] = "Fonctions";
         $this->data['select_h3'] = "Quelle fonction cherches-tu ?";
-        $this->data['select_p'] = "Partage nous cette fonction afinde faire la meilleure recherche.";
+        $this->data['select_p'] = "Partage-nous cette fonction afin de faire la meilleure recherche.";
         $this->data['field_name_value'] = "function_name";
     }
 

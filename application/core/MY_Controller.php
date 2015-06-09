@@ -16,7 +16,7 @@ class MY_Controller extends CI_Controller {
         }
         $this->primary_nav();
         $this->check_user_logged_in();
-        echo '<pre>' . print_r($this->user, true) . '</pre>';
+        //echo '<pre>' . print_r($this->user, true) . '</pre>';
         // More config
         date_default_timezone_set('Europe/Brussels');
         setlocale(LC_ALL, 'fr_FR.utf-8');

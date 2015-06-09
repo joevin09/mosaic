@@ -65,10 +65,10 @@ class Tests_sql extends MY_Controller {
                 . " ON DUPLICATE KEY UPDATE last_name = VALUES(last_name), first_name = VALUES(first_name)";
 
         $res = $this->db->query($sql_query);
-        echo '<pre>' . print_r($this->db->insert_id(), true) . '</pre>';
+        //echo '<pre>' . print_r($this->db->insert_id(), true) . '</pre>';
 
-        echo '<pre>' . print_r($this->db->last_query(), true) . '</pre>';
-        echo '<pre>' . print_r($res, true) . '</pre>';
+        //echo '<pre>' . print_r($this->db->last_query(), true) . '</pre>';
+        //echo '<pre>' . print_r($res, true) . '</pre>';
 
         // DELETE
 //        $sql_query = "DELETE FROM jbl_users WHERE user_id = '" . $this->db->insert_id() . "'";
@@ -77,8 +77,8 @@ class Tests_sql extends MY_Controller {
         // UPDATE
         $sql_query = "UPDATE jbl_users SET last_name = 'mon nouveau nom', email = 'pierre+@greenpig.be' WHERE user_id = '114'";
         $res = $this->db->query($sql_query);
-        echo '<pre>' . print_r($this->db->last_query(), true) . '</pre>';
-        echo '<pre>' . print_r($res, true) . '</pre>';
+        //echo '<pre>' . print_r($this->db->last_query(), true) . '</pre>';
+        //echo '<pre>' . print_r($res, true) . '</pre>';
         ?>
 
         <form method="post" action="">

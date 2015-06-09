@@ -6380,10 +6380,43 @@ select.custom_select {
 .no-js .custom_select {
   display: block;
 }
-@media (max-width: 1020px) {
+.padding-bottom {
+  margin-bottom: 6px!important;
+}
+.pres h2 {
+  display: block;
+  display: inline-block;
+}
+.pres .agency_h2 {
+  display: block!important;
+}
+@media (max-width: 1050px) {
   .custom_select {
     display: block!important;
   }
+  .last_register_home ul li a p {
+    bottom: 0!important;
+  }
+}
+.bread-fixe {
+  text-transform: uppercase;
+  color: #9f8e70;
+  display: inline;
+  display: inline-block;
+  padding: 0!important;
+  margin: 0!important;
+  top: 0!important;
+  left: 0!important;
+}
+.connect-top .last_register_home {
+  bottom: 127px!important;
+}
+.connect-top .img_post h4 {
+  bottom: 255px!important;
+}
+.form-group {
+  display: inline-block;
+  width: 100%;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -6642,6 +6675,7 @@ and open the template in the editor.
 }
 .link_agency a:hover {
   color: #9f8e70;
+  text-decoration: none;
 }
 .link_agency a:first-child {
   padding-right: 0px;
@@ -6986,31 +7020,32 @@ and open the template in the editor.
     Created on : 10-avr.-2015, 10:29:45
     Author     : Joevin
 */
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   #postulant .img_post {
-    left: 420px!important;
+    left: 355px!important;
     bottom: 180px!important;
   }
   .img_post h4 {
-    bottom: 90px!important;
+    left: 62px!important;
+    bottom: 240px!important;
   }
   .content {
     height: 700px;
   }
   #postulant .last_register_home {
-    bottom: -10px !important;
+    bottom: 60px!important;
     left: 50px!important;
   }
   #agency .img_post {
-    bottom: 180px!important;
-    left: 80px!important;
+    margin-left: -65px !important;
+    top: 200px!important;
   }
   #postulant {
     margin-bottom: 70px!important;
   }
   #agency .last_register_home {
-    bottom: -10px !important;
-    left: 0px!important;
+    bottom: 100px !important;
+    left: 75px!important;
   }
 }
 .content {
@@ -7153,9 +7188,6 @@ and open the template in the editor.
   z-index: 10;
   display: inline-block;
   opacity: 1;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
 }
 .img_post img {
   width: 450px;
@@ -7201,7 +7233,7 @@ and open the template in the editor.
   left: 0px;
 }
 #postulant .img_post h4 {
-  left: 132px;
+  left: 52px;
   bottom: 220px;
 }
 #agency {
@@ -7423,12 +7455,6 @@ and open the template in the editor.
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.last_register_home ul:hover img {
-  opacity: 0.5;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
 .last_register_home ul:hover .active img {
   opacity: 1;
   -webkit-transition: all 0.3s;
@@ -7468,6 +7494,30 @@ and open the template in the editor.
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
+  -o-animation-duration: .4s;
+  -o-animation-iteration-count: 1;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-fill-mode: forwards;
+  -moz-animation-duration: .4s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-duration: .4s;
+  -ms-animation-iteration-count: 1;
+  -ms-animation-timing-function: ease-in-out;
+  -ms-animation-fill-mode: forwards;
+  -webkit-animation-duration: .4s;
+       -o-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-iteration-count: 1;
+       -o-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+       -o-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .l1 {
   left: 0;
@@ -7476,6 +7526,18 @@ and open the template in the editor.
   width: 3px;
   -webkit-animation-name: l1;
   -webkit-animation-delay: 0s;
+  -webkit-animation-name: l1;
+       -o-animation-name: l1;
+          animation-name: l1;
+  -webkit-animation-delay: 0s;
+       -o-animation-delay: 0s;
+          animation-delay: 0s;
+  -ms-animation-name: l1;
+  -ms-animation-delay: 0s;
+  -moz-animation-name: l1;
+  -moz-animation-delay: 0s;
+  -o-animation-name: l1;
+  -o-animation-delay: 0s;
 }
 .l2 {
   top: 0;
@@ -7484,6 +7546,18 @@ and open the template in the editor.
   height: 3px;
   -webkit-animation-name: l2;
   -webkit-animation-delay: .3s;
+  -webkit-animation-name: l2;
+       -o-animation-name: l2;
+          animation-name: l2;
+  -webkit-animation-delay: .3s;
+       -o-animation-delay: .3s;
+          animation-delay: .3s;
+  -ms-animation-name: l2;
+  -ms-animation-delay: .3s;
+  -moz-animation-name: l2;
+  -moz-animation-delay: .3s;
+  -o-animation-name: l2;
+  -o-animation-delay: .3s;
 }
 .l3 {
   right: 0;
@@ -7492,6 +7566,18 @@ and open the template in the editor.
   width: 3px;
   -webkit-animation-name: l3;
   -webkit-animation-delay: .6s;
+  -webkit-animation-name: l3;
+       -o-animation-name: l3;
+          animation-name: l3;
+  -webkit-animation-delay: .6s;
+       -o-animation-delay: .6s;
+          animation-delay: .6s;
+  -ms-animation-name: l3;
+  -ms-animation-delay: .6s;
+  -moz-animation-name: l3;
+  -moz-animation-delay: .6s;
+  -o-animation-name: l3;
+  -o-animation-delay: .6s;
 }
 .l4 {
   bottom: 0;
@@ -7500,6 +7586,18 @@ and open the template in the editor.
   height: 3px;
   -webkit-animation-name: l4;
   -webkit-animation-delay: 0.9s;
+  -webkit-animation-name: l4;
+       -o-animation-name: l4;
+          animation-name: l4;
+  -webkit-animation-delay: 0.9s;
+       -o-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  -ms-animation-name: l4;
+  -ms-animation-delay: 0.9s;
+  -moz-animation-name: l4;
+  -moz-animation-delay: 0.9s;
+  -o-animation-name: l4;
+  -o-animation-delay: 0.9s;
 }
 @-webkit-keyframes l1 {
   0% {
@@ -7541,19 +7639,38 @@ and open the template in the editor.
     background: #9f8e70;
   }
 }
-@-webkit-keyframes l4 {
-  0% {
-    width: 0;
-    background: #9f8e70;
-  }
-  100% {
-    width: 280px;
-    background: #9f8e70;
-  }
-}
 .my_img_post {
   left: 30px;
   margin-top: -45px;
+}
+.offre-square {
+  width: 10px;
+  text-indent: -9999px;
+  height: 10px;
+  background: #9f8e70;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.offre-text p {
+  font-size: 12px;
+  margin-top: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+.offre-text p span {
+  width: 10px;
+  height: 10px;
+  background: #9f8e70;
+  position: absolute;
+  top: 2px;
+  left: 0px;
+}
+.last_register_home_agency {
+  bottom: 127px!important;
+}
+.my_h4_agency {
+  bottom: 256px!important;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -7575,9 +7692,9 @@ and open the template in the editor.
 */
 .checkbox {
   /*    
-    input[type="checkbox"]{
-        display: none;
-    }*/
+        input[type="checkbox"]{
+            display: none;
+        }*/
 }
 .checkbox select {
   opacity: 0;
@@ -7587,12 +7704,6 @@ and open the template in the editor.
 }
 .checkbox.active select {
   opacity: 1;
-}
-.competences-content #competences {
-  display: none;
-}
-.no-js .competences-content #competences {
-  display: block;
 }
 .poeple-modif .avatar-modif {
   display: none;
@@ -7628,6 +7739,250 @@ and open the template in the editor.
 }
 .img-profil label:hover:after {
   opacity: 1;
+}
+.ecra-bread {
+  margin-top: 30px!important;
+}
+.ecra-left {
+  margin-right: 90px!important;
+}
+.no-padding {
+  margin-bottom: 5px!important;
+}
+.move-h-mosaic {
+  left: 68px!important;
+}
+.move-all-h-mosaic {
+  left: 132px!important;
+}
+.move-h-mosaic-agency-finish {
+  left: 88px!important;
+}
+.move-h-mosaic-agency {
+  left: 78px!important;
+}
+.move-all-h-mosaic-agency {
+  left: 133px!important;
+}
+.h3-bread {
+  margin-bottom: 25px;
+}
+.move-retour {
+  margin-top: 9px;
+}
+.capacite {
+  margin-bottom: 84px;
+}
+.modal-content {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.modal-content .beco-white {
+  color: #ffffff;
+}
+.modal-body {
+  padding: 0px;
+}
+.modal-content {
+  position: relative;
+  padding: 30px;
+  background-color: #231f20;
+  border: none;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 400px;
+}
+.modal-content h4,
+.modal-content label {
+  color: #ffffff;
+}
+.close {
+  text-shadow: none;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.close span {
+  color: #231f20;
+  position: relative;
+  top: -64px;
+  left: 20px;
+}
+.close:hover {
+  color: #ffffff;
+}
+.modal-header {
+  border-bottom: 0;
+  padding: 0px;
+  min-height: 0px;
+}
+.modal-body span {
+  color: #9f8e70;
+}
+.modal-dialog {
+  width: 400px;
+  margin: 160px auto;
+}
+.log {
+  padding-top: 100px;
+}
+.modal-backdrop.in {
+  opacity: 0.95;
+}
+.modal-backdrop {
+  background-color: #ffffff;
+}
+.modal-footer {
+  border-top: 0;
+  padding: 0px;
+}
+.modal-content label {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.modal-content h4 {
+  color: #231f20;
+  font-weight: 700;
+  font-size: 16px;
+  position: absolute;
+  left: 10px;
+  top: -35px;
+  margin-bottom: 20px;
+  font-family: "Droid Serif", Georgia, Times, serif;
+}
+.modal-content h4:before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 2px;
+  background: #231f20;
+  float: left;
+  margin: 10px 8px 5px 0;
+}
+.modal-content input,
+.modal-content textarea {
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  float: left;
+  padding: 6px 10px;
+  margin-bottom: 5px;
+}
+.annul-design {
+  width: 100%;
+  float: none;
+  text-align: left;
+  border: none;
+  background: none;
+  color: #ffffff;
+  margin-top: 10px;
+  font-family: "Droid Serif", Georgia, Times, serif;
+}
+.annul-design:hover {
+  color: #9f8e70;
+}
+.send-design {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 0;
+  float: left;
+  background: #231f20!important;
+  border: 2px solid #9f8e70!important;
+  padding: 10px 60px;
+  z-index: 100;
+  margin-bottom: 0;
+  color: #ffffff;
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.send-design:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background: #231f20!important;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.send-design:hover:before {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+}
+.send-design:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #9f8e70;
+  -webkit-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.email-js {
+  margin-top: 20px;
+  display: none!important;
+}
+.no-js .email-js {
+  display: block!important;
+}
+.no-js .contact-me {
+  display: none;
+}
+.forgot-title {
+  left: 10px!important;
+  top: -35px !important;
+}
+.forgot-title:before {
+  margin-top: 10px!important;
+}
+.forgot {
+  cursor: pointer;
+}
+.change {
+  padding: 10px 0!important;
+  margin: 0!important;
+  font-size: 12px;
+}
+.annul-design {
+  width: auto;
+  float: none;
+  text-align: left;
+  border: none;
+  clear: both;
+  background: none;
+  color: #ffffff;
+  margin-top: 15px;
+  padding-top: 10px;
+  margin-left: -4px;
+  font-family: "Droid Serif", Georgia, Times, serif;
+  display: block;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -7935,9 +8290,9 @@ and open the template in the editor.
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(189, 204, 212, 0.6);
 }
 select {
-  background: url("http://joevinlicot.be/arrow-select.png") no-repeat 90% 14px #ffffff;
-  -webkit-background-size: 12% 12%;
-          background-size: 12%;
+  background: url("http://joevinlicot.be/arrow-select.png") no-repeat 95% 14px #ffffff;
+  -webkit-background-size: 4% 4%;
+          background-size: 4%;
   border: none;
   width: 100px;
   text-transform: uppercase;
@@ -7955,11 +8310,13 @@ select:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(189, 204, 212, 0.6);
 }
 .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .alert {
   color: #d44343;
   padding: 10px 15px;
+  display: inline;
+  display: inline-block;
   margin-bottom: 0px;
   border: none;
   border-radius: 0px;
@@ -8004,7 +8361,7 @@ and open the template in the editor.
 .connect {
   position: relative;
   top: -45px;
-  padding: 82px 15px 82px 15px;
+  padding: 80px 15px 74px 15px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -8288,11 +8645,16 @@ and open the template in the editor.
   -webkit-animation: showUp 0.1s 5s both linear;
   animation: showUp 0.1s 5s both linear;
 }
+.membres p {
+  padding-right: 10px;
+}
 a.back,
 div.back {
   position: relative;
   border: none;
   background: none;
+  display: inline;
+  display: inline-block;
   color: #231f20;
   text-transform: none;
   top: 10px;
@@ -8423,13 +8785,13 @@ and open the template in the editor.
   list-style-type: square;
   padding: 2px 0;
 }
+.move-top {
+  margin-top: -45px;
+  padding-bottom: 80px;
+}
 .motif.motif-remerciement {
   left: 418px;
   top: 50px;
-}
-.motif.motif-privacy {
-  left: 418px;
-  bottom: 69px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -8557,12 +8919,12 @@ and open the template in the editor.
     Author     : Joevin
 */
 .profil-poeple h2 {
-  font-size: 20px!important;
-  text-transform: none;
-  color: #231f20;
+  /*        font-size: 20px!important;
+                text-transform: none;
+                color: @my_black;*/
 }
 .profil-poeple h2:after {
-  display: none!important;
+  margin: 15px 0 5px 0!important;
 }
 .profil-poeple button {
   margin-bottom: 10px;
@@ -8583,19 +8945,28 @@ and open the template in the editor.
 }
 .profil-poeple .fonction {
   font-weight: 700;
+  font-style: italic;
+  padding-top: 0!important;
 }
 .profil-poeple .city {
   color: #9f8e70;
-  padding: 2px 0!important;
+  padding: 56px 0 2px 0!important;
 }
 .profil-poeple .website {
   text-transform: uppercase;
   display: block;
-  margin-bottom: 10px;
   color: #9f8e70;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   clear: both;
+}
+.profil-poeple .website span {
+  padding-left: 30px!important;
+}
+.profil-poeple .website .fa-laptop {
+  position: absolute;
+  font-size: 19px;
+  top: 1px;
 }
 .return {
   position: absolute!important;
@@ -8620,6 +8991,8 @@ and open the template in the editor.
 }
 .profil-poeple .about {
   padding-top: 0!important;
+  display: inline-block;
+  padding: 5px 10px 15px 0!important;
 }
 .capacite {
   height: auto;
@@ -8677,7 +9050,13 @@ and open the template in the editor.
   list-style: none;
   background: #9f8e70;
   float: left;
+  font-size: 13px;
   margin-right: 30px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 40px!important;
+  padding: 10px;
 }
 .capacite ul li:nth-child(6n+7) {
   clear: both;
@@ -8748,7 +9127,6 @@ and open the template in the editor.
   height: auto;
   min-height: 453px;
   left: 27px;
-  padding-bottom: 170px;
 }
 .formation h2 {
   font-size: 20px!important;
@@ -8762,6 +9140,13 @@ and open the template in the editor.
 .formation .formation-text {
   z-index: 500;
   position: relative;
+}
+.formation .formation-text p {
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.formation-postulant {
+  padding-bottom: 180px;
 }
 .fa-plus {
   font-size: 18px!important;
@@ -8804,8 +9189,6 @@ and open the template in the editor.
 }
 .link-modif-profil {
   position: relative;
-  display: inline;
-  display: inline-block;
 }
 .link-modif-profil .fa-pencil {
   position: absolute;
@@ -8935,15 +9318,6 @@ and open the template in the editor.
   top: 0;
   margin-top: -100px;
 }
-.cityexperience {
-  top: 0;
-  margin-top: -100px;
-}
-.cityexperience select {
-  width: auto;
-  padding-right: 50px;
-  background-color: #e8e8e8;
-}
 .btn-choose.link-modif-profil.modif-your-profil {
   top: 0;
   left: 0;
@@ -8971,72 +9345,981 @@ and open the template in the editor.
 .btn-choose.link-modif-profil.modif-your-profil button:hover {
   border: 2px solid #9f8e70;
 }
-.poeple-modif .change-profil input {
+.poeple-modif .change-profil input,
+.poeple-modif .change-profil textarea {
   border-bottom: 1px solid #231f20 !important;
+}
+.poeple-modif .change-profil textarea {
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.img-profil:hover .modif-profil-avatar.modif-profil-avatar {
+  display: none;
+}
+.modif-profil-avatar.modif-profil-avatar {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  color: #231f20;
+  z-index: 100;
+  left: 0;
+  font-size: 12px;
+  bottom: 0;
+  padding-left: 10px!important;
+  padding-right: 10px!important;
+  text-transform: none;
+  text-align: center;
+}
+#map-canvas {
+  height: 400px;
+  width: 400px;
+  position: relative;
+  left: 300px;
+  margin-top: -200px;
+  margin-bottom: 80px;
+  border: 3px solid #ffffff;
+}
+.formation span a {
+  color: #9f8e70;
+}
+.no-margin {
+  margin-bottom: 5px!important;
 }
 /*RADIO*/
 /*
 input[type=radio] {
-	visibility: hidden;
+        visibility: hidden;
 }
 
 .squaredThree {
-	width: 20px;	
-	margin: 20px auto;
-	position: relative;
+        width: 20px;	
+        margin: 20px auto;
+        position: relative;
 }
 
 .squaredThree label {
-	cursor: pointer;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	top: 0;
-	border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        border-radius: 4px;
 
-	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
-	-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
-	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+        -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+        -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
 
-	background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
-	background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
-	background: -o-linear-gradient(top, #222 0%, #45484d 100%);
-	background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
-	background: linear-gradient(top, #222 0%, #45484d 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+        background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
+        background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
+        background: -o-linear-gradient(top, #222 0%, #45484d 100%);
+        background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
+        background: linear-gradient(top, #222 0%, #45484d 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
 }
 
 .squaredThree label:after {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
-	opacity: 0;
-	content: '';
-	position: absolute;
-	width: 9px;
-	height: 5px;
-	background: transparent;
-	top: 4px;
-	left: 4px;
-	border: 3px solid #fcfff4;
-	border-top: none;
-	border-right: none;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 5px;
+        background: transparent;
+        top: 4px;
+        left: 4px;
+        border: 3px solid #fcfff4;
+        border-top: none;
+        border-right: none;
 
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
 }
 
 .squaredThree label:hover::after {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-	filter: alpha(opacity=30);
-	opacity: 0.3;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+        filter: alpha(opacity=30);
+        opacity: 0.3;
 }
 
 .squaredThree input[type=checkbox]:checked + label:after {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(opacity=100);
-	opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
 }*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06-juin-2015, 17:21:55
+    Author     : Joevin
+*/
+.formation1 {
+  display: none;
+}
+.formation1.active {
+  display: block;
+}
+.offres {
+  display: none;
+}
+.offres.active {
+  display: block;
+}
+.poeple-modif .agency_h2:after {
+  position: relative;
+  left: 141px;
+}
+.caractere {
+  color: #9f8e70;
+  font-size: 12px;
+}
+.first-input {
+  position: absolute;
+}
+/*.propos{
+    padding-top: 78px;
+}*/
+.form-post .form-control {
+  padding: 0!important;
+}
+.apropos {
+  padding-top: 15px;
+}
+.formation1,
+.formation2,
+.formation3 {
+  margin-bottom: 30px;
+}
+.competences-content h2 {
+  color: #231f20;
+  font-size: 20px;
+}
+.competences-content h2:after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  display: block;
+  margin: 15px 0 30px 0;
+  position: relative;
+  background: #231f20;
+}
+.competences-content label {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 0;
+  color: #231f20;
+  text-transform: uppercase;
+}
+.competences-content input {
+  color: #231f20;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 7px 10px;
+  margin-bottom: 5px;
+}
+.competences-content .form-control {
+  padding: 7px 10px!important;
+}
+.competences-content .form-control {
+  background: #ffffff;
+  width: 86%;
+  color: #231f20;
+  padding-left: 0!important;
+  border-bottom: 1px solid #231f20 !important;
+}
+.competences-content .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.competences-content .input-competences {
+  width: 86%;
+  height: 150px;
+  padding: 15px 0!important;
+  background: #ffffff;
+}
+.competences-content .input-competences li {
+  display: inline-block;
+  background: #9f8e70;
+  padding: 2px 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.no-js .competences-content #competences {
+  display: block;
+}
+.li-competence {
+  padding: 2px 10px 2px 2px!important;
+}
+.remove {
+  cursor: pointer;
+}
+.removeall {
+  font-size: 12px;
+  padding-right: 33px;
+  cursor: pointer;
+}
+.parcours {
+  width: 453px;
+  padding: 30px!important;
+}
+.parcours h2 {
+  color: #ffffff;
+  font-size: 20px;
+}
+.parcours h2:after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  display: block;
+  margin: 15px 0 30px 0;
+  position: relative;
+  background: #ffffff;
+}
+.parcours label {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.parcours input {
+  color: #231f20;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 7px 10px;
+  margin-bottom: 5px;
+}
+.parcours input[type="checkbox"] {
+  display: none;
+}
+.parcours .day1:before,
+.parcours .day2:before,
+.parcours .day3:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #9f8e70;
+  margin-right: 10px;
+}
+.parcours .checked .day1:before,
+.parcours .checked .day2:before,
+.parcours .checked .day3:before {
+  background: #9f8e70;
+}
+.parcours .checked #process-1-date-2,
+.parcours .checked #process-2-date-2,
+.parcours .checked #process-3-date-2 {
+  opacity: .3;
+}
+.parcours .form-control {
+  padding: 7px 10px!important;
+}
+.plus1.plus1,
+.plus2.plus2 {
+  margin-top: 40px!important;
+}
+.plus1,
+.plus2,
+.plusplus1,
+.plusplus2 {
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  margin-left: -16px !important;
+  font-size: 12px!important;
+  text-align: center!important;
+  margin-top: 25px!important;
+  margin-bottom: 0!important;
+  margin-right: 0!important;
+  border: 1px solid #ffffff !important;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.plus1:hover,
+.plus2:hover,
+.plusplus1:hover,
+.plusplus2:hover {
+  color: #9f8e70 !important;
+  border: 1px solid #9f8e70 !important;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  line-height: 19px!important;
+}
+.day1,
+.day2,
+.day3 {
+  color: #9f8e70 !important;
+  text-transform: none!important;
+  padding-left: 10px!important;
+}
+.cityexperience {
+  margin-top: -330px;
+  left: -114px;
+}
+.cityexperience select {
+  width: auto;
+  padding-right: 50px;
+  background-color: #e8e8e8;
+}
+.profil-poeple .alert {
+  position: absolute;
+  left: 15px;
+  top: -40px;
+}
+.save {
+  position: relative;
+  display: inline-block;
+  left: 205px;
+  top: 74px;
+}
+.save-agency {
+  top: -37px;
+}
+.del-profil {
+  font-family: "Droid Serif", Georgia, Times, serif;
+  font-size: 12px;
+  position: absolute;
+  top: 140px;
+}
+.search-title {
+  color: #231f20;
+  font-size: 20px;
+  position: relative;
+  left: 56px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.search-title:before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 2px;
+  background: #231f20;
+  float: left;
+  margin: 10px 8px 5px 0;
+}
+.secteurs {
+  width: 453px;
+  position: relative;
+  padding: 30px!important;
+  float: right;
+  right: 81px;
+  top: 30px!important;
+}
+.secteurs h2 {
+  color: #ffffff;
+  font-size: 20px;
+}
+.secteurs h2:after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  display: block;
+  margin: 15px 0 30px 0;
+  position: relative;
+  background: #ffffff;
+}
+.secteurs label {
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.secteurs label:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #9f8e70;
+  margin-right: 20px;
+}
+.secteurs .active label:before {
+  background: #9f8e70;
+}
+.secteurs input {
+  width: 100%;
+  display: none;
+}
+.secteurs select {
+  width: 100%;
+  display: none;
+}
+.secteurs select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.function {
+  margin-bottom: 10px;
+}
+.checkbox.active select {
+  display: block!important;
+}
+.region {
+  clear: both;
+  margin-top: -144px !important;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.region input {
+  display: none;
+}
+.region label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #231f20 !important;
+  text-transform: uppercase;
+}
+.region select {
+  width: 100%;
+}
+.region select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.region-agency {
+  padding: 30px!important;
+}
+.region-agency input {
+  display: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #231f20 !important;
+}
+.region-agency input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.region-agency #cities {
+  display: none;
+}
+.region-agency label:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #9f8e70;
+  margin-right: 20px;
+}
+.region-agency .checked label:before {
+  background: #9f8e70;
+}
+.last-motif {
+  position: absolute;
+  top: -92px !important;
+  left: 359px!important;
+  z-index: 10;
+}
+.last-modif-agency {
+  top: -72px !important;
+}
+.padding-top-title {
+  margin-top: 30px!important;
+}
+.pluspadding {
+  margin-right: 0!important;
+}
+.offres {
+  margin-bottom: 30px;
+}
+.about {
+  word-wrap: break-word;
+  overflow: hidden;
+  width: 100%;
+}
+.formation1 .form-group {
+  width: auto!important;
+}
+.checkbox label {
+  padding-left: 0!important;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-juin-2015, 15:42:34
+    Author     : Joevin
+*/
+@media (max-height: 599px) {
+  .navbar-nav {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .connect_link {
+    margin-left: 0px;
+  }
+}
+@media (min-height: 599px) and (max-width: 500px) {
+  .connect-top-agency {
+    margin-bottom: -80px !important;
+  }
+}
+@media (max-width: 1200px) {
+  .propos {
+    padding-top: 10px;
+  }
+  .save {
+    left: 74px;
+    top: 74px;
+  }
+  .parcours {
+    left: 384px;
+  }
+  .secteurs {
+    left: -13px;
+  }
+  .cityexperience {
+    left: -150px;
+  }
+  .error {
+    margin: 0 20px 130px 120px!important;
+  }
+  .error-img {
+    left: 33px!important;
+    bottom: -10px !important;
+    margin-bottom: -80px;
+  }
+  .all-members {
+    left: 54px;
+    bottom: 130px !important;
+    margin-bottom: -162px;
+    display: block!important;
+  }
+  .nav.social_icon > li > a:hover,
+  .nav.social_icon > li > a:focus,
+  .nav.social_icon > li > a:active {
+    background-color: #9f8e70;
+  }
+  .my_h4.move_h {
+    bottom: 264px!important;
+    left: 91px!important;
+  }
+  .last_register_home.all-members {
+    bottom: 141px;
+    left: 50px;
+  }
+  .img_post {
+    left: 350px;
+    bottom: 171px;
+  }
+  .bread {
+    left: 20px!important;
+  }
+  .pres {
+    margin: 0 20px 0px 20px;
+  }
+  .pres.pres_agency {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .move-top {
+    left: 385px!important;
+  }
+  .form {
+    left: 380px;
+  }
+  .formation {
+    left: 382px!important;
+    top: -180px;
+  }
+  #map-canvas {
+    left: 190px;
+    margin-top: -270px;
+  }
+  .navbar-nav {
+    margin-left: 0px!important;
+  }
+  .capacite {
+    margin-top: -300px;
+    left: 40px;
+  }
+  #form-contact {
+    top: -201px;
+    margin-bottom: -125px;
+  }
+  #form_agency {
+    left: -17px;
+  }
+  .save-agency {
+    top: -40px !important;
+  }
+}
+@media (max-width: 991px) {
+  .save-agency {
+    top: -40px !important;
+  }
+  .save {
+    left: 503px;
+    top: -23px;
+  }
+  .region {
+    top: 165px!important;
+    margin-bottom: 37px;
+  }
+  .search-title {
+    margin-top: 300px!important;
+  }
+  .search-title-agency {
+    margin-top: 108px!important;
+  }
+  .parcours {
+    left: 170px;
+    top: -10px;
+  }
+  .cityexperience {
+    left: -150px;
+    top: 308px;
+  }
+  .error {
+    margin: 0 20px 170px 120px!important;
+  }
+  .last_register_home.all-members ul li {
+    margin-top: 0px;
+  }
+  #form-contact {
+    top: -28px;
+    margin-bottom: 48px;
+  }
+  .all-members {
+    left: 310px!important;
+    top: -56px;
+    margin-bottom: -133px;
+  }
+  .capacite {
+    margin-top: -123px;
+    left: 20px;
+  }
+  .formation {
+    left: 178px!important;
+    top: -15px;
+  }
+  #map-canvas {
+    left: 75px!important;
+    margin-top: -90px !important;
+  }
+  #form_postulant {
+    top: 110px!important;
+    margin-bottom: 150px;
+    left: 183px;
+  }
+  #form_postulant h4 {
+    left: 50px;
+  }
+  .bread {
+    left: 10px!important;
+  }
+  #form_agency {
+    top: 170px!important;
+    left: -13px;
+    margin-bottom: 210px;
+  }
+  #form_agency h4 {
+    left: 50px;
+  }
+  .form {
+    left: 180px;
+  }
+  .remerciement {
+    margin-bottom: 80px!important;
+    left: 16%;
+  }
+  #agency .last_register_home {
+    bottom: 10px !important;
+    left: 20px!important;
+    margin-bottom: 50px;
+  }
+  #postulant .last_register_home {
+    bottom: 60px!important;
+    left: 310px!important;
+  }
+  .last_register_home ul li {
+    margin-bottom: 12px;
+  }
+  .last_register_home ul li:nth-child(3) {
+    clear: both;
+  }
+}
+@media (max-width: 693px) {
+  .region {
+    top: 215px!important;
+    margin-bottom: 296px;
+  }
+  .save {
+    left: 175px;
+  }
+  .secteurs {
+    width: 400px;
+    left: -43px;
+  }
+  .cityexperience {
+    margin-top: -227px;
+    left: -132px !important;
+  }
+  .parcours {
+    width: 400px;
+    top: 40px!important;
+    left: 37px!important;
+    padding: 30px!important;
+  }
+  .error {
+    margin: 0 20px 190px 110px!important;
+  }
+  .all-members {
+    left: 85px!important;
+    top: 25px;
+    margin-bottom: -52px;
+  }
+  .capacite {
+    margin-top: 30px;
+    left: 60px;
+  }
+  .formation {
+    left: 8%!important;
+    top: 40px;
+    width: 400px;
+  }
+  #map-canvas {
+    left: 46px!important;
+    margin-top: 50px !important;
+  }
+  .remerciement {
+    margin-bottom: 80px!important;
+    left: 0;
+  }
+  .bread {
+    left: 70px!important;
+  }
+  .form {
+    left: 110px;
+    top: -20px !important;
+    width: 300px;
+  }
+  .pres {
+    margin: 0 0px 0px 8%;
+  }
+  .navbar-nav.connect_link > li a {
+    padding: 10px 15px!important;
+  }
+  .slide_menu .nav-collapse {
+    height: 500px;
+  }
+  #agency {
+    right: 37px;
+  }
+  .last_register_home ul li {
+    float: left!important;
+  }
+  #agency .last_register_home {
+    bottom: -68px !important;
+    left: 110px!important;
+  }
+  .pres.pres_agency {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  #postulant .last_register_home {
+    bottom: -15px !important;
+    left: 30%!important;
+  }
+  #wrapper {
+    padding: 120px 30px 0px 30px;
+  }
+}
+@media (max-width: 693px) {
+  #postulant .last_register_home {
+    left: 20%!important;
+  }
+}
+@media (max-width: 500px) {
+  .cityexperience {
+    margin-top: -227px;
+    left: -200px !important;
+  }
+  .search-title {
+    left: 0px;
+  }
+  .save {
+    left: 90px;
+  }
+  .secteurs {
+    left: 25px;
+  }
+  .parcours {
+    left: -30px !important;
+  }
+  .error {
+    margin: 0 0px 80px 0px!important;
+    left: -29px;
+    width: 108%!important;
+  }
+  .all-members {
+    left: -4px !important;
+  }
+  #form_postulant {
+    left: -16px !important;
+    top: 130px!important;
+    margin-bottom: 210px;
+  }
+  #form_agency {
+    top: 190px!important;
+    left: -16px !important;
+    margin-bottom: 269px;
+  }
+  .form {
+    left: 0px;
+    top: 20px!important;
+    width: 100%;
+  }
+  .connect {
+    top: 50px!important;
+    left: -14px !important;
+    margin-bottom: 150px;
+  }
+  .display-400 {
+    display: none;
+  }
+  .pres {
+    padding: 30px 72px 30px 30px;
+    margin: 0 0px 0px -30px;
+    width: auto;
+  }
+  .navbar-nav.connect_link > li a {
+    padding: 10px 15px!important;
+  }
+  .slide_menu .nav-collapse {
+    height: 500px;
+  }
+  .last_register_home ul li {
+    float: left!important;
+  }
+  #agency .last_register_home {
+    bottom: -68px !important;
+    left: 0px!important;
+  }
+  .pres.pres_agency {
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 430px;
+  }
+  #postulant .last_register_home {
+    bottom: -510px !important;
+    left: 16%!important;
+  }
+  #postulant {
+    margin-bottom: -250px !important;
+    width: 700px;
+  }
+  #agency {
+    margin-bottom: -250px;
+  }
+  .bread {
+    left: -13px !important;
+  }
+  .pres.pres_agency {
+    margin-right: -45px;
+  }
+  #agency {
+    left: -29px;
+  }
+  #wrapper {
+    padding: 120px 0px 0px 30px;
+  }
+  .logo-text {
+    display: none;
+  }
+  .navbar-brand {
+    padding: 25px 0px 16px 16px;
+  }
+  #form-contact {
+    left: -15px !important;
+  }
+  .formation {
+    top: 40px!important;
+    left: -30px !important;
+    width: 108%!important;
+  }
+  #map-canvas {
+    left: -30px !important;
+    top: 0px!important;
+    margin-bottom: 65px!important;
+  }
+  .capacite {
+    left: 30px;
+  }
+  .pres a {
+    border: 2px solid #9f8e70;
+    padding: 10px 31px;
+  }
+}
+@media (max-width: 320px) {
+  .poeple-modif .agency_h2:after {
+    position: relative;
+    left: 0px;
+  }
+  .parcours {
+    width: 320px!important;
+  }
+  .all-members {
+    left: 60px!important;
+  }
+  #postulant {
+    margin-bottom: -130px !important;
+    width: 310px;
+  }
+  .cityexperience {
+    width: 320px;
+  }
+  .secteurs {
+    width: 320px;
+  }
+  .save {
+    left: 69px;
+  }
+  .day {
+    left: 108px;
+  }
+  .modal-content {
+    width: 320px;
+  }
+  .capacite {
+    left: 10px;
+  }
+  .formation {
+    width: 110%!important;
+  }
+  #map-canvas {
+    width: 320px;
+  }
+  #agency {
+    margin-bottom: -130px;
+  }
+  .pres.pres_agency {
+    width: 116%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
